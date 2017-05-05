@@ -5,4 +5,13 @@
         "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 
 <struts-config>
+    <global-forwards>
+        <forward name="success" path="WEB-INF/result/confirm.jsp"></forward>
+    </global-forwards>
+    <action-mappings>
+        <action path="/login" type="action.MyFirstAction">
+            <forward name="bad-user" path="/WEB-INF/result/bad-user.jsp"/>
+            <forward name="bad-password" path="/WEB-INF/result/bad-password.jsp"/>
+        </action>
+    </action-mappings>
 </struts-config>
