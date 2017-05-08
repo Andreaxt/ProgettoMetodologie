@@ -14,8 +14,8 @@ body{background: #eee}
 .header__icon-bar{display : block;float: right;padding:20px;display:none;}
 .header__icon-bar span{display: block; height:3px;width: 30px; background: #fff; margin-bottom: 5px;}
 
-.cover{height:70%;
-    background-image: url("https://source.unsplash.com/category/buildings");
+.cover{height:50%;
+    background-image: url("sfondo3croci.png");
     background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
