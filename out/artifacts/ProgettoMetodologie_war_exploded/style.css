@@ -23,6 +23,12 @@ body{background: #eee}
     position:relative;
 }
 
+.div__login{
+    height: 50%;
+    border-radius: 5px;
+    background:green;
+    padding: 20px;
+}
 
 /*-----------------------------
 Tablet
