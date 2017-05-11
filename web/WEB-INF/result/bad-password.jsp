@@ -8,10 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <title>Title</title>
-    <h1>psw sbagliata</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link href="style.css" rel="stylesheet" >
+
+
 </head>
 <body>
-
+    <div class="login__pagediv">
+        <div class="div__login">
+            <h1>password sbagliata!</h1>
+            <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
+        </div>
+    </div>
 </body>
 </html>

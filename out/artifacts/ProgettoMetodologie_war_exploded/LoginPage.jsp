@@ -26,13 +26,14 @@
 </head>
 
 <body>
-
-
+<div class="login__pagediv">
 <form action="login.do" method="post"  class="div__login" >
   Username <input type="text" name="user" class="casella__user"><br>
   Password <input type="password" class="casella__password" name="psw"/><br>
   <input type="submit" id="invio" value="Login" class="botton__submit">
+
 </form>
+</div>
 
 
 
