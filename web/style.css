@@ -23,7 +23,11 @@ body{background: #eee}
     position:relative;
 }
 
+.menu__navigazione{
+}
+
 .login__pagediv {
+
     width: 360px;
     padding: 8% 0 0;
     margin: auto;

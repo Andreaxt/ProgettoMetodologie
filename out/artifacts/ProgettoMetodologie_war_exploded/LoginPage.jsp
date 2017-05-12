@@ -26,6 +26,22 @@
 </head>
 
 <body>
+<header class="header clearfix">
+  <a href="" class="header__Logo">Logo</a>
+  <a href="" class="header__icon-bar">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <ul class="header__menu">
+    <li class="header__menu__item"><a href="index.html">Home</a></li>
+    <li class="header__menu__item"><a href="LoginPage.jsp">Login</a></li>
+    <li class="header__menu__item"><a href="">Chi siamo</a></li>
+    <li class="header__menu__item"><a href="">FAQ</a></li>
+    <li class="header__menu__item"><a href="">item</a></li>
+
+  </ul>
+</header>
 <div class="login__pagediv">
 <form action="login.do" method="post"  class="div__login" >
   Username <input type="text" name="user" class="casella__user"><br>
