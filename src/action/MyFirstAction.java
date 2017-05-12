@@ -18,16 +18,19 @@ public class MyFirstAction extends Action{
        String psw =request.getParameter("psw");
 
         Connection conn = null;
-/*
+        Statement st = null;
+
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Iltronodispade22.");
+            conn.createStatement();
+
         }
         catch (Exception e) {
-            System.out.println("Impossibile connettersi al database");
-            System.exit(1);
+            System.out.println("Impossibile connettersi al database"+ e.getMessage() );
+
         }
-*/
+
 
 
         if((email.trim().length()<1))
