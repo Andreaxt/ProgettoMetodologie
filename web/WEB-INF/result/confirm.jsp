@@ -9,9 +9,16 @@
 <html>
 <head>
     <title>Title</title>
-    <h1>login effettuato</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link href="style.css" rel="stylesheet" >
 </head>
 <body>
+<div class="login__pagediv">
+    <div class="div__login">
+        <h1>Login effetuato con successo!</h1>
+        <h2> <a href="index.html">Torna alla home</a></h2>
+    </div>
+</div>
 
 </body>
 </html>

@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-11.14:34:17.293</IntrospectionTimestamp>
-      <IntrospectionStateNumber>570</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-12.12:41:15.884</IntrospectionTimestamp>
+      <IntrospectionStateNumber>577</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -37,9 +37,9 @@
       <IntrospectionTimestamp>2017-05-11.12:14:56.266</IntrospectionTimestamp>
       <IntrospectionStateNumber>492</IntrospectionStateNumber>
     </schema>
-    <table id="9" parent="3" name="Utenti">
+    <table id="9" parent="3" name="utenti">
       <ObjectId>16587</ObjectId>
-      <StateNumber>570</StateNumber>
+      <StateNumber>577</StateNumber>
     </table>
     <column id="10" parent="9" name="userName">
       <Position>1</Position>

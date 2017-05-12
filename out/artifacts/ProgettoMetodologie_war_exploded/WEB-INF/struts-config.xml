@@ -12,6 +12,7 @@
         <action path="/login" type="action.MyFirstAction">
             <forward name="bad-user" path="/WEB-INF/result/bad-user.jsp"/>
             <forward name="bad-password" path="/WEB-INF/result/bad-password.jsp"/>
+            <forward name="success" path="/WEB-INF/result/confirm.jsp"/>
         </action>
     </action-mappings>
 </struts-config>
