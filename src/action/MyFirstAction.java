@@ -8,6 +8,8 @@ import org.apache.struts.action.ActionMapping;
 import java.sql.*;
 import java.util.*;
 
+import beans.UtentiBean;
+
 /**
  * Created by Andrea on 28/04/2017.
  */
@@ -16,8 +18,7 @@ public class MyFirstAction extends Action{
     public ActionForward execute(ActionMapping mapping, ActionForm form, javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws Exception {
        String email= request.getParameter("user");
        String psw =request.getParameter("psw");
-       System.out.println("passata questa email" +email);
-        System.out.println("passata questa psw" +psw);
+
 
 
         Connection conn = null;
@@ -25,11 +26,15 @@ public class MyFirstAction extends Action{
         String u="";
         String s="";
 
+        String query="SELECT \"username\",\"password\"\n" +
+                "FROM \"utenti\"\n" +
+                "where \"username\"='"+email+"' AND \"password\"='"+psw+"'";
+
         try {
-            Class.forName("org.postgresql.Driver");
+
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Iltronodispade22.");
             st =conn.createStatement(); //effetua la quety al db
-            ResultSet rs = st.executeQuery("SELECT utenti.userName,utenti.password FROM utenti WHERE utenti.userName="+email+" AND utenti.password="+ psw);
+            ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) //per passare alla prossima riga
 
@@ -40,9 +45,9 @@ public class MyFirstAction extends Action{
                  s = rs.getString("password");
 
             }
-          //  rs.close();
-            //st.close();
-            //conn.close();
+            rs.close();
+            st.close();
+            conn.close();
 
         }
         catch (Exception e) {
@@ -50,20 +55,15 @@ public class MyFirstAction extends Action{
 
         }
         //(psw.trim().length()<1)
-        u="Andreaxt";
-        s="password";
+        //bean
 
-        System.out.println("passata questa email " +email);
-        System.out.println("passata questa u " +u);
-
-        if(!u.equals(email))
+        if(!u.equals(email)||(email.trim().length()<1))
            return(mapping.findForward("bad-user"));
-        if(!s.equals(psw))
+        if(!s.equals(psw)||(psw.trim().length()<1))
             return(mapping.findForward("bad-password"));
         else
             return mapping.findForward("success");
     }
-
 
 
 

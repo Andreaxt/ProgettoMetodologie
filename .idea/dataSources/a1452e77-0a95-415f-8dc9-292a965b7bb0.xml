@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-12.12:41:15.884</IntrospectionTimestamp>
-      <IntrospectionStateNumber>577</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-12.16:02:24.631</IntrospectionTimestamp>
+      <IntrospectionStateNumber>585</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -39,13 +39,13 @@
     </schema>
     <table id="9" parent="3" name="utenti">
       <ObjectId>16587</ObjectId>
-      <StateNumber>577</StateNumber>
+      <StateNumber>583</StateNumber>
     </table>
-    <column id="10" parent="9" name="userName">
+    <column id="10" parent="9" name="username">
       <Position>1</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>570</StateNumber>
+      <StateNumber>578</StateNumber>
     </column>
     <column id="11" parent="9" name="password">
       <Position>2</Position>
@@ -65,12 +65,18 @@
       <NotNull>1</NotNull>
       <StateNumber>570</StateNumber>
     </column>
-    <index id="14" parent="9" name="Utenti_pkey">
+    <column id="14" parent="9" name="permessi">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>585</StateNumber>
+    </column>
+    <index id="15" parent="9" name="Utenti_pkey">
       <ObjectId>16590</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="15" parent="9" name="Utenti_pkey">
+    <key id="16" parent="9" name="Utenti_pkey">
       <ObjectId>16591</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>Utenti_pkey</UnderlyingIndexName>
