@@ -8,7 +8,7 @@ import org.apache.struts.action.ActionMapping;
 import java.sql.*;
 import java.util.*;
 
-import beans.UtentiBean;
+import beans.UtenteConnesso;
 
 /**
  * Created by Andrea on 28/04/2017.
@@ -19,19 +19,17 @@ public class MyFirstAction extends Action{
        String email= request.getParameter("user");
        String psw =request.getParameter("psw");
 
-
-
         Connection conn = null;
         Statement st = null;
         String u="";
-        String s="";
+        String p="";
 
         String query="SELECT \"username\",\"password\"\n" +
                 "FROM \"utenti\"\n" +
                 "where \"username\"='"+email+"' AND \"password\"='"+psw+"'";
 
         try {
-
+            Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Iltronodispade22.");
             st =conn.createStatement(); //effetua la quety al db
             ResultSet rs = st.executeQuery(query);
@@ -42,7 +40,7 @@ public class MyFirstAction extends Action{
 
                  u = rs.getString("userName");
 
-                 s = rs.getString("password");
+                 p = rs.getString("password");
 
             }
             rs.close();
@@ -59,10 +57,18 @@ public class MyFirstAction extends Action{
 
         if(!u.equals(email)||(email.trim().length()<1))
            return(mapping.findForward("bad-user"));
-        if(!s.equals(psw)||(psw.trim().length()<1))
+        if(!p.equals(psw)||(psw.trim().length()<1))
             return(mapping.findForward("bad-password"));
-        else
+        else {
+            UtenteConnesso userCon = new UtenteConnesso();
+            userCon.setNome(u);
+            userCon.setConnesso(true);
+            System.out.println(userCon.connesso);
+            request.getSession().setAttribute("utenteConnesso", userCon);
+            request.getSession().setAttribute("userCon", userCon);
+
             return mapping.findForward("success");
+        }
     }
 
 
