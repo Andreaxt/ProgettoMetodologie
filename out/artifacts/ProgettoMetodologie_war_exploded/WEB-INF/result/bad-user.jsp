@@ -17,9 +17,9 @@
 <body>
     <div class="login__pagediv">
         <div class="div__login">
-            <h1>Nome utente sbagliato!</h1>
-            <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
-        </div>
+        <h1>Nome utente sbagliato!</h1>
+        <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
+    </div>
     </div>
 
 </body>
