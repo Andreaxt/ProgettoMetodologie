@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-12.16:02:24.631</IntrospectionTimestamp>
-      <IntrospectionStateNumber>585</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-26.17:53:24.178</IntrospectionTimestamp>
+      <IntrospectionStateNumber>637</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -37,49 +37,182 @@
       <IntrospectionTimestamp>2017-05-11.12:14:56.266</IntrospectionTimestamp>
       <IntrospectionStateNumber>492</IntrospectionStateNumber>
     </schema>
-    <table id="9" parent="3" name="utenti">
-      <ObjectId>16587</ObjectId>
-      <StateNumber>583</StateNumber>
+    <sequence id="9" parent="3" name="utenti_id_utente_seq">
+      <ObjectId>24878</ObjectId>
+      <StateNumber>635</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="farmacia_id_seq">
+      <ObjectId>24796</ObjectId>
+      <StateNumber>607</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="farmacia_id_titolare_seq">
+      <ObjectId>24804</ObjectId>
+      <StateNumber>608</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="3" name="mansione_utente_e_luogo_id_farmacia_seq">
+      <ObjectId>24860</ObjectId>
+      <StateNumber>621</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="3" name="mansione_utente_e_luogo_id_utente_seq">
+      <ObjectId>24854</ObjectId>
+      <StateNumber>620</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="14" parent="3" name="farmacia">
+      <ObjectId>24798</ObjectId>
+      <StateNumber>625</StateNumber>
     </table>
-    <column id="10" parent="9" name="username">
+    <table id="15" parent="3" name="mansione_utente_e_luogo">
+      <ObjectId>24856</ObjectId>
+      <StateNumber>637</StateNumber>
+    </table>
+    <table id="16" parent="3" name="utenti">
+      <ObjectId>16587</ObjectId>
+      <StateNumber>637</StateNumber>
+    </table>
+    <column id="17" parent="14" name="id_farmacia">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>617</StateNumber>
+      <SequenceName>farmacia_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;farmacia_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="18" parent="14" name="indirizzo">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>607</StateNumber>
+    </column>
+    <column id="19" parent="14" name="nomefarmacia">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>607</StateNumber>
+    </column>
+    <column id="20" parent="14" name="telefono">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>607</StateNumber>
+    </column>
+    <column id="21" parent="14" name="id_titolare">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>608</StateNumber>
+      <SequenceName>farmacia_id_titolare_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;farmacia_id_titolare_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="22" parent="14" name="farmacia_pkey">
+      <ObjectId>24802</ObjectId>
+      <ColNames>id_farmacia</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="23" parent="14" name="fki_id_titolare">
+      <ObjectId>24816</ObjectId>
+      <ColNames>id_titolare</ColNames>
+    </index>
+    <key id="24" parent="14" name="farmacia_pkey">
+      <ObjectId>24803</ObjectId>
+      <ColNames>id_farmacia</ColNames>
+      <UnderlyingIndexName>farmacia_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="15" name="id_utente">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>620</StateNumber>
+      <SequenceName>mansione_utente_e_luogo_id_utente_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;mansione_utente_e_luogo_id_utente_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="26" parent="15" name="id_farmacia">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>621</StateNumber>
+      <SequenceName>mansione_utente_e_luogo_id_farmacia_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;mansione_utente_e_luogo_id_farmacia_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="27" parent="15" name="ruolo">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>622</StateNumber>
+    </column>
+    <index id="28" parent="15" name="fki_id_utente">
+      <ObjectId>24871</ObjectId>
+      <ColNames>id_utente</ColNames>
+    </index>
+    <index id="29" parent="15" name="fki_id_farmacia">
+      <ObjectId>24877</ObjectId>
+      <ColNames>id_farmacia</ColNames>
+    </index>
+    <foreign-key id="30" parent="15" name="id_utente_fk">
+      <ObjectId>24886</ObjectId>
+      <ColNames>id_utente</ColNames>
+      <RefTableName>utenti</RefTableName>
+      <RefKeyName>id_utente_pk</RefKeyName>
+      <RefColNames>id_utente</RefColNames>
+    </foreign-key>
+    <foreign-key id="31" parent="15" name="id_farmacia_fk">
+      <ObjectId>24872</ObjectId>
+      <ColNames>id_farmacia</ColNames>
+      <RefTableName>farmacia</RefTableName>
+      <RefKeyName>farmacia_pkey</RefKeyName>
+      <RefColNames>id_farmacia</RefColNames>
+    </foreign-key>
+    <column id="32" parent="16" name="username">
       <Position>1</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>578</StateNumber>
     </column>
-    <column id="11" parent="9" name="password">
+    <column id="33" parent="16" name="password">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>570</StateNumber>
     </column>
-    <column id="12" parent="9" name="id">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>570</StateNumber>
-    </column>
-    <column id="13" parent="9" name="email">
+    <column id="34" parent="16" name="email">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>570</StateNumber>
     </column>
-    <column id="14" parent="9" name="permessi">
+    <column id="35" parent="16" name="permessi">
       <Position>5</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>585</StateNumber>
     </column>
-    <index id="15" parent="9" name="Utenti_pkey">
-      <ObjectId>16590</ObjectId>
-      <ColNames>id</ColNames>
+    <column id="36" parent="16" name="id_utente">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>635</StateNumber>
+      <SequenceName>utenti_id_utente_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;utenti_id_utente_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="37" parent="16" name="id_utente_pk">
+      <ObjectId>24884</ObjectId>
+      <ColNames>id_utente</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="16" parent="9" name="Utenti_pkey">
-      <ObjectId>16591</ObjectId>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>Utenti_pkey</UnderlyingIndexName>
+    <key id="38" parent="16" name="id_utente_pk">
+      <ObjectId>24885</ObjectId>
+      <ColNames>id_utente</ColNames>
+      <UnderlyingIndexName>id_utente_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
   </database-model>

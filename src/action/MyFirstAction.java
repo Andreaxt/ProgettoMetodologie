@@ -30,7 +30,7 @@ public class MyFirstAction extends Action{
 
         try {
             Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Iltronodispade22.");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
             st =conn.createStatement(); //effetua la quety al db
             ResultSet rs = st.executeQuery(query);
 
