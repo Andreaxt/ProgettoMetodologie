@@ -1,15 +1,9 @@
 package beans;
-import org.apache.struts.action.ActionForm;
-
-import java.io.*;
-import java.util.*;
-import java.sql.*;
-import java.io.Serializable;
 
 public class UtenteConnesso implements java.io.Serializable {
     private String nome;
     private String password;
-    private String userid;
+    private int userid;
     private String codUser;
     public boolean connesso;
 
@@ -22,14 +16,21 @@ public class UtenteConnesso implements java.io.Serializable {
         this.connesso=false;
 
     }
+
     public String getNome() {
         return nome;
     }
-    public void setNome(String nome) {
+    public void setNome(String nome)
+    {
         this.nome = nome;
     }
 
-
+    public int getUserId(){
+        return userid;
+    }
+    public void setUserId(int userid){
+        this.userid=userid;
+    }
 
     public boolean getConnesso() {
         return connesso;
