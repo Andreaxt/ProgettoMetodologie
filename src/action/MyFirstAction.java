@@ -7,6 +7,8 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import java.sql.*;
 import java.util.*;
+import java.lang.*;
+
 
 import beans.UtenteConnesso;
 
@@ -20,19 +22,20 @@ public class MyFirstAction extends Action{
        String psw =request.getParameter("psw");
 
         Connection conn = null;
-        Statement st = null;
+        PreparedStatement st = null;
         String u="";
         String p="";
-
-        String query="SELECT \"username\",\"password\"\n" +
-                "FROM \"utenti\"\n" +
-                "where \"username\"='"+email+"' AND \"password\"='"+psw+"'";
-
+        
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
-            st =conn.createStatement(); //effetua la quety al db
-            ResultSet rs = st.executeQuery(query);
+
+
+            String query="SELECT username , password FROM utenti WHERE username=? AND PASSWORD=?";
+            st = conn.prepareStatement(query);
+            st.setString(1,email);
+            st.setString(2,psw);
+            ResultSet rs = st.executeQuery();
 
             while (rs.next()) //per passare alla prossima riga
 
