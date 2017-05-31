@@ -30,7 +30,7 @@
     </a>
     <ul class="header__menu">
         <li class="header__menu__item"><a href="index.html">Home</a></li>
-        <% if(userCon.connesso==true){
+        <% if(userCon.getConnesso()==true){
         %>
         <li class="header__menu__item"><a href="LogOutPage.jsp">LogOut</a></li>
         <%
@@ -69,9 +69,9 @@
 
 
 <%
-    if(userCon.connesso==true){
+    if(userCon.getConnesso()==true){
 %>
-    <h1>Utente autenticato con successo</h1>
+    <h1><a href="emailPage.jsp">Email Page</a></h1>
 <%
     }
     else {

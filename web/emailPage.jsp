@@ -1,25 +1,24 @@
-<%--
+<%@ page import="Utility.EmailUtility" %><%--
   Created by IntelliJ IDEA.
   User: Andrea
-  Date: 24/05/2017
-  Time: 14:40
+  Date: 31/05/2017
+  Time: 15:28
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>email</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="style.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
-
 <body>
 <jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
+
 
 <header class="header clearfix">
     <a href="" class="header__Logo">Logo</a>
@@ -48,43 +47,19 @@
 
 </header>
 
-<section class="cover">
-</section>
+<table>
+    <thead>
+    <tr><th>Mittente</th><th>Destinatario</th><th>Testo</th></tr>
+    </thead>
+    <tbody>
+        <%String user= userCon.getNome(); System.out.println(user);%>
+        <% String result="";%>
+        <% EmailUtility mostra = new EmailUtility();%>
+        <%  result= mostra.GeneraTabella(user); System.out.println(result);%>
+        <%=result%>
+    </tbody>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-
-        $(".header__icon-bar").click(function(e){
-
-            $(".header__menu").toggleClass('is-open');
-            e.preventDefault();
-
-        });
-    });
-</script>
-
-
-
-
-<%
-    if(userCon.getConnesso()==true){
-%>
-    <h1><a href="emailPage.jsp">Email Page</a></h1>
-<%
-    }
-    else {
-    %>
-<div class="login__pagediv">
-    <div class="div__login">
-        <h1>Utente non autenticato con successo!</h1>
-        <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
-    </div>
-</div>
-    <%
-        }
-    %>
+</table>
 
 </body>
 </html>
