@@ -24,7 +24,7 @@
 <div class="login__pagediv">
     <div class="div__login">
         <h1>LogOut effettuato!</h1>
-        <h2> <a href="index.html">Torna alla homepage</a></h2>
+        <h2> <a href="index.jsp">Torna alla homepage</a></h2>
     </div>
 </div>
 </body>

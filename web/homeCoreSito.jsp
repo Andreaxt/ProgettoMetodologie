@@ -12,7 +12,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="style.css">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +28,7 @@
         <span></span>
     </a>
     <ul class="header__menu">
-        <li class="header__menu__item"><a href="index.html">Home</a></li>
+        <li class="header__menu__item"><a href="index.jsp">Home</a></li>
         <% if(userCon.getConnesso()==true){
         %>
         <li class="header__menu__item"><a href="LogOutPage.jsp">LogOut</a></li>
@@ -48,8 +47,10 @@
 
 </header>
 
-<section class="cover">
-</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -71,7 +72,9 @@
 <%
     if(userCon.getConnesso()==true){
 %>
+    <div>
     <h1><a href="emailPage.jsp">Email Page</a></h1>
+    </div>
 <%
     }
     else {
@@ -85,6 +88,12 @@
     <%
         }
     %>
+
+
+<footer class="footer">
+    <p>Copyright &copy; Andrea viviani</p>
+</footer>
+
 
 </body>
 </html>

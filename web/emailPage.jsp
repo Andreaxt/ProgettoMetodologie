@@ -28,7 +28,7 @@
         <span></span>
     </a>
     <ul class="header__menu">
-        <li class="header__menu__item"><a href="index.html">Home</a></li>
+        <li class="header__menu__item"><a href="index.jsp">Home</a></li>
         <% if(userCon.getConnesso()==true){
         %>
         <li class="header__menu__item"><a href="LogOutPage.jsp">LogOut</a></li>
@@ -90,6 +90,10 @@
     </div>
     <%
     }%>
+
+    <footer class="footer">
+        <p>Copyright &copy; Andrea viviani</p>
+    </footer>
 
 
 </body>

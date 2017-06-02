@@ -34,7 +34,7 @@
     <span></span>
   </a>
   <ul class="header__menu">
-    <li class="header__menu__item"><a href="index.html">Home</a></li>
+    <li class="header__menu__item"><a href="index.jsp">Home</a></li>
     <li class="header__menu__item"><a href="LoginPage.jsp">Login</a></li>
     <li class="header__menu__item"><a href="">Chi siamo</a></li>
     <li class="header__menu__item"><a href="">FAQ</a></li>
@@ -50,6 +50,11 @@
 
 </form>
 </div>
+
+<footer class="footer">
+  <p>Copyright &copy; Andrea viviani</p>
+</footer>
+
 
 
 
