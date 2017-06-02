@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-30.15:05:15.967</IntrospectionTimestamp>
-      <IntrospectionStateNumber>646</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-06-02.16:20:15.754</IntrospectionTimestamp>
+      <IntrospectionStateNumber>650</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -83,7 +83,7 @@
     </table>
     <table id="17" parent="3" name="messaggi">
       <ObjectId>24893</ObjectId>
-      <StateNumber>645</StateNumber>
+      <StateNumber>650</StateNumber>
     </table>
     <table id="18" parent="3" name="utenti">
       <ObjectId>16587</ObjectId>
@@ -220,53 +220,58 @@
       <NotNull>1</NotNull>
       <StateNumber>644</StateNumber>
     </column>
-    <index id="40" parent="17" name="messaggi_pkey">
+    <column id="40" parent="17" name="oggetto">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>650</StateNumber>
+    </column>
+    <index id="41" parent="17" name="messaggi_pkey">
       <ObjectId>24900</ObjectId>
       <ColNames>id_messaggi</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="41" parent="17" name="fki_id_utente_fk">
+    <index id="42" parent="17" name="fki_id_utente_fk">
       <ObjectId>24907</ObjectId>
       <ColNames>id_utente</ColNames>
     </index>
-    <key id="42" parent="17" name="messaggi_pkey">
+    <key id="43" parent="17" name="messaggi_pkey">
       <ObjectId>24901</ObjectId>
       <ColNames>id_messaggi</ColNames>
       <UnderlyingIndexName>messaggi_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="43" parent="17" name="id_utente_fk">
+    <foreign-key id="44" parent="17" name="id_utente_fk">
       <ObjectId>24902</ObjectId>
       <ColNames>id_utente</ColNames>
       <RefTableName>utenti</RefTableName>
       <RefKeyName>id_utente_pk</RefKeyName>
       <RefColNames>id_utente</RefColNames>
     </foreign-key>
-    <column id="44" parent="18" name="username">
+    <column id="45" parent="18" name="username">
       <Position>1</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>578</StateNumber>
     </column>
-    <column id="45" parent="18" name="password">
+    <column id="46" parent="18" name="password">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>570</StateNumber>
     </column>
-    <column id="46" parent="18" name="email">
+    <column id="47" parent="18" name="email">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>570</StateNumber>
     </column>
-    <column id="47" parent="18" name="permessi">
+    <column id="48" parent="18" name="permessi">
       <Position>5</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>585</StateNumber>
     </column>
-    <column id="48" parent="18" name="id_utente">
+    <column id="49" parent="18" name="id_utente">
       <Position>7</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
@@ -274,12 +279,12 @@
       <SequenceName>utenti_id_utente_seq</SequenceName>
       <DefaultExpression>nextval(&apos;utenti_id_utente_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <index id="49" parent="18" name="id_utente_pk">
+    <index id="50" parent="18" name="id_utente_pk">
       <ObjectId>24884</ObjectId>
       <ColNames>id_utente</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="18" name="id_utente_pk">
+    <key id="51" parent="18" name="id_utente_pk">
       <ObjectId>24885</ObjectId>
       <ColNames>id_utente</ColNames>
       <UnderlyingIndexName>id_utente_pk</UnderlyingIndexName>

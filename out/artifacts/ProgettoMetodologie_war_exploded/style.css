@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 html,body{height:100%;}
 body{background: #eee}
 
@@ -72,6 +73,23 @@ body{background: #eee}
     box-sizing: border-box;
 }
 
+div.table-title {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+}
+
+.table-title h3 {
+    color: #fafafa;
+    font-size: 30px;
+    font-weight: 400;
+    font-style:normal;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform:uppercase;
+}
 .casella__password{
     width: 50%;
     padding: 12px 20px;
@@ -80,6 +98,24 @@ body{background: #eee}
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    font-family: "Roboto";
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){font-family:"Roboto";background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
 }
 
 /*-----------------------------

@@ -26,21 +26,21 @@ public class EmailUtility {
         }
     }
 
-    public String GeneraTabella(String nomeUtente){
+    public String GeneraTabellaPostaInviata(String nomeUtente){
 
 
         String output="";
-        String query="SELECT mittente , destinatario , testo FROM messaggi WHERE mittente=? OR destinatario=?";
+        String query="SELECT mittente , destinatario , testo, oggetto FROM messaggi WHERE mittente=?";
         try {
             st = conn.prepareStatement(query);
             st.setString(1, nomeUtente);
-            st.setString(2, nomeUtente);
+
             ResultSet rs = st.executeQuery();
 
             while (rs.next()) //per passare alla prossima riga
 
             {
-                output = output.concat("<tr><td><p>" + rs.getString("mittente") + "</p></td><td><p>" + rs.getString("destinatario") + "</p></td><td><p>" + rs.getString("testo") + "</p></td>");
+                output = output.concat("<tr><td><p>" + rs.getString("destinatario") + "</p></td><td><p>" + rs.getString("oggetto") + "</p></td><td><p>" + rs.getString("testo") + "</p></td>");
 
             }
 
@@ -57,7 +57,41 @@ public class EmailUtility {
         System.out.println("metodo genera tabella concluso");
 
 
-       
+
+        return output;
+    }
+
+    public String GeneraTabellaPostaRicevuta(String nomeUtente){
+
+
+        String output="";
+        String query="SELECT mittente , destinatario , testo , oggetto FROM messaggi WHERE  destinatario=?";
+        try {
+            st = conn.prepareStatement(query);
+            st.setString(1, nomeUtente);
+            ResultSet rs = st.executeQuery();
+
+            while (rs.next()) //per passare alla prossima riga
+
+            {
+                output = output.concat("<tr><td><p>" + rs.getString("mittente") + "</p></td><td><p>" + rs.getString("oggetto") + "</p></td><td><p>" + rs.getString("testo") + "</p></td>");
+
+            }
+
+            rs.close();
+            st.close();
+            conn.close();
+        }
+
+        catch (Exception e) {
+            System.out.println("Impossibile connettersi al database"+ e.getMessage() );
+
+        }
+
+        System.out.println("metodo genera tabella concluso");
+
+
+
         return output;
     }
 }
