@@ -21,7 +21,7 @@
 <jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
 
 <header class="header clearfix">
-    <a href="" class="header__Logo">Logo</a>
+    <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>
     <a href="" class="header__icon-bar">
         <span></span>
         <span></span>
