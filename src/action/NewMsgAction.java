@@ -25,38 +25,44 @@ public class NewMsgAction extends Action {
         String testo=request.getParameter("testo");
         Connection conn = null;
         PreparedStatement st = null;
-        String u="";
-        String p="";
         int id_utente=-1;
+        System.out.println("Stampo il testo del messaggio"+testo);
+
 
         java.sql.Date odierna = new java.sql.Date(Calendar.getInstance().getTime().getTime());
 
-        HttpSession session= request.getSession();
-        UtenteConnesso userConn = (UtenteConnesso)session.getAttribute("userConn");
+
+        HttpSession session= request.getSession(true);
+        UtenteConnesso u = (UtenteConnesso)session.getAttribute("userCon");
+
+        String nomeUser=u.getEmail();
+        int iduser=u.getUserId();
 
 
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
-
+            System.out.println("connesisone effutata inzio query");
             String query="INSERT INTO messaggi (testo,mittente ,destinatario,data,id_utente,oggetto)VALUES (?,?,?,?,?,?) " ;
             st = conn.prepareStatement(query);
             st.setString(1,testo);
-            st.setString(2,userConn.getEmail());
-            st.setDate(3,odierna);
-            st.setInt(4,userConn.getUserId());
-            st.setString(5,testo);
+            st.setString(2,u.getEmail());
+            st.setString(3,destinatario);
+            st.setDate(4,odierna);
+            st.setInt(5,u.getUserId());
+            st.setString(6,oggetto);
 
             ResultSet rs = st.executeQuery();
-
+            rs.close();
+            st.close();
+            conn.close();
         }
         catch (Exception e) {
-            System.out.println("Impossibile connettersi al database"+ e.getMessage() );
+            System.out.println("Impossibile connettersi al database nel metodo messaggio"+ e.getMessage() );
 
         }
-        //(psw.trim().length()<1)
-        //bean
+
 
         return mapping.findForward("success");
     }

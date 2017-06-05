@@ -45,11 +45,8 @@
 <div class="login__pagediv">
     <form action="newMsg.do" method="post"  class="div__login" >
        <p>      A:</p><input type="text" name="destinatario" class="casella__user"><br>
-
-        <p>Oggetto:</p><input type="password" class="casella__password" name="oggetto"/><br>
-
-        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><<br>
-
+        <p>Oggetto:</p><input type="text" class="casella_user" name="oggetto"/><br>
+        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
         <input type="submit" id="invio" value="Invia" class="botton__submit">
     </form>
 </div>

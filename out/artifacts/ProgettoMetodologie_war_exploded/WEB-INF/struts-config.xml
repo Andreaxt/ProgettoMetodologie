@@ -17,7 +17,7 @@
         </action>
 
         <action path="/newMsg" type="action.NewMsgAction">
-            <forward name="success" path="emailPage.jsp"/>
+            <forward name="success" path="/emailPage.jsp"/>
         </action>
     </action-mappings>
 </struts-config>

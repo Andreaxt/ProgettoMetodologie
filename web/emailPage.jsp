@@ -56,10 +56,10 @@
     <tr><th>Mittente</th><th>Oggetto</th><th>Testo</th><th>elimina</th></tr>
     </div>
     <tbody>
-        <%String user= userCon.getEmail(); System.out.println(user);%>
+        <%String user= userCon.getEmail();%>
         <% String result="";%>
         <% EmailUtility mostra = new EmailUtility();%>
-        <%  result= mostra.GeneraTabellaPostaRicevuta(user); System.out.println(result);%>
+        <%  result= mostra.GeneraTabellaPostaRicevuta(user); %>
         <%=result%>
     </tbody>
 
@@ -71,7 +71,7 @@
             <tr><th>Destinatario</th><th>Oggetto</th><th>Testo</th><th>elimina</th></tr>
         </div>
         <tbody>
-        <% user= userCon.getEmail(); System.out.println(user);%>
+        <% user= userCon.getEmail(); %>
         <%  result="";%>
         <%  mostra = new EmailUtility();%>
         <%  result= mostra.GeneraTabellaPostaInviata(user);%>

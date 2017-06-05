@@ -54,7 +54,7 @@ public class EmailUtility {
 
         }
 
-        System.out.println("metodo genera tabella concluso");
+
 
 
 
@@ -88,7 +88,7 @@ public class EmailUtility {
 
         }
 
-        System.out.println("metodo genera tabella concluso");
+
 
 
 
