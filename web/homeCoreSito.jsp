@@ -39,7 +39,7 @@
         <%
             }
         %>
-
+        <li class="header__menu__item"><a href="homeCoreSito.jsp">AreaRiservata</a></li>
         <li class="header__menu__item"><a href="">Chi siamo</a></li>
         <li class="header__menu__item"><a href="">FAQ</a></li>
     </ul>
@@ -72,16 +72,24 @@
 <%
     if(userCon.getConnesso()==true){
 %>
-    <div>
-    <h1><a href="emailPage.jsp">Email Page</a></h1>
+
+<section class="cards clearfix">
+    <div class="card">
+        <img class="card__image"  src="Image/MailImage.jpg" alt="Nature">
+        <div class="card__copy">
+            <h3><a href="emailPage.jsp"> Email Page </a></h3>
+            <p> Invia email in modo sicuro e rapido ai tuoi colleghi!</p>
+        </div>
     </div>
+</section>
+
 <%
     }
     else {
     %>
 <div class="login__pagediv">
     <div class="div__login">
-        <h1>Utente non autenticato con successo!</h1>
+        <h1>Utente non autenticato!</h1>
         <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
     </div>
 </div>

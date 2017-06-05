@@ -25,6 +25,8 @@
 </head>
 
 <body>
+<jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
+
 <header class="header clearfix">
     <a href="" class="header__Logo">Logo</a>
     <a href="" class="header__icon-bar">
@@ -34,19 +36,30 @@
     </a>
     <ul class="header__menu">
         <li class="header__menu__item"><a href="index.jsp">Home</a></li>
+        <% if(userCon.getConnesso()==true){
+        %>
+        <li class="header__menu__item"><a href="LogOutPage.jsp">LogOut</a></li>
+        <%
+        }else{
+        %>
         <li class="header__menu__item"><a href="LoginPage.jsp">Login</a></li>
+        <%
+            }
+        %>
+        <li class="header__menu__item"><a href="homeCoreSito.jsp">AreaRiservata</a></li>
         <li class="header__menu__item"><a href="">Chi siamo</a></li>
         <li class="header__menu__item"><a href="">FAQ</a></li>
-        <li class="header__menu__item"><a href="">item</a></li>
-
     </ul>
+
+
 </header>
+
 
 <div class="login__pagediv">
     <form action="newMsg.do" method="post"  class="div__login" >
-       <p>      A:</p><input type="text" name="destinatario" class="casella__user"><br>
-        <p>Oggetto:</p><input type="text" class="casella_user" name="oggetto"/><br>
-        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
+        Invia a:<input type="text" name="destinatario" class="casella__user"><br>
+        Oggetto:<input type="text" class="casella__user" name="oggetto"/><br>
+       <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
         <input type="submit" id="invio" value="Invia" class="botton__submit">
     </form>
 </div>
