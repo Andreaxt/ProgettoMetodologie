@@ -18,13 +18,14 @@ import beans.UtenteConnesso;
 public class MyFirstAction extends Action{
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form, javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws Exception {
-       String email= request.getParameter("user");
-       String psw =request.getParameter("psw");
+        String email= request.getParameter("user");
+        String psw =request.getParameter("psw");
 
         Connection conn = null;
         PreparedStatement st = null;
         String u="";
         String p="";
+        String emailUtente="";
         int id_utente=-1;
 
         try {
@@ -32,7 +33,7 @@ public class MyFirstAction extends Action{
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
 
-            String query="SELECT username , password, id_utente FROM utenti WHERE username=? AND PASSWORD=?";
+            String query="SELECT username , password, id_utente,email FROM utenti WHERE username=? AND PASSWORD=?";
             st = conn.prepareStatement(query);
             st.setString(1,email);
             st.setString(2,psw);
@@ -42,11 +43,13 @@ public class MyFirstAction extends Action{
 
             {
 
-                 u = rs.getString("userName");
+                u = rs.getString("userName");
 
-                 p = rs.getString("password");
+                p = rs.getString("password");
 
-                 id_utente= rs.getInt("id_utente");
+                id_utente= rs.getInt("id_utente");
+
+                emailUtente=rs.getString("email");
 
             }
             rs.close();
@@ -62,7 +65,7 @@ public class MyFirstAction extends Action{
         //bean
 
         if(!u.equals(email)||(email.trim().length()<1))
-           return(mapping.findForward("bad-user"));
+            return(mapping.findForward("bad-user"));
         if(!p.equals(psw)||(psw.trim().length()<1))
             return(mapping.findForward("bad-password"));
         else {
@@ -70,6 +73,7 @@ public class MyFirstAction extends Action{
             userCon.setNome(u);
             userCon.setUserId(id_utente);
             userCon.setConnesso(true);
+            userCon.setEmail(emailUtente);
             System.out.println(userCon.getUserId());
             request.getSession().setAttribute("utenteConnesso", userCon);
             request.getSession().setAttribute("userCon", userCon);

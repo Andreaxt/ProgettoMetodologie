@@ -47,12 +47,11 @@
   Username <input type="text" name="user" class="casella__user"><br>
   Password <input type="password" class="casella__password" name="psw"/><br>
   <input type="submit" id="invio" value="Login" class="botton__submit">
-
 </form>
 </div>
 
 <footer class="footer">
-  <p>Copyright &copy; Andrea viviani</p>
+  <p>Copyright &copy; Andrea Viviani</p>
 </footer>
 
 

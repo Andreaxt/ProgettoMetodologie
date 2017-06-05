@@ -49,13 +49,14 @@
 
 <% if(userCon.getConnesso()){%>
 
-<table class="table">
+<h1><a href="newMsgPage.jsp">Nuovo Messaggio</a></h1>
+<table class="table" >
     <div>
         <h1>Posta Ricevuta</h1>
-    <tr><th>Mittente</th><th>Oggetto</th><th>Testo</th></tr>
+    <tr><th>Mittente</th><th>Oggetto</th><th>Testo</th><th>elimina</th></tr>
     </div>
     <tbody>
-        <%String user= userCon.getNome(); System.out.println(user);%>
+        <%String user= userCon.getEmail(); System.out.println(user);%>
         <% String result="";%>
         <% EmailUtility mostra = new EmailUtility();%>
         <%  result= mostra.GeneraTabellaPostaRicevuta(user); System.out.println(result);%>
@@ -67,13 +68,13 @@
     <table class="table">
         <div>
             <h1>Posta Inviata</h1>
-            <tr><th>Destinatario</th><th>Oggetto</th><th>Testo</th></tr>
+            <tr><th>Destinatario</th><th>Oggetto</th><th>Testo</th><th>elimina</th></tr>
         </div>
         <tbody>
-        <% user= userCon.getNome(); System.out.println(user);%>
+        <% user= userCon.getEmail(); System.out.println(user);%>
         <%  result="";%>
         <%  mostra = new EmailUtility();%>
-        <%  result= mostra.GeneraTabellaPostaInviata(user); System.out.println(result);%>
+        <%  result= mostra.GeneraTabellaPostaInviata(user);%>
         <%=result%>
         </tbody>
 
@@ -92,7 +93,7 @@
     }%>
 
     <footer class="footer">
-        <p>Copyright &copy; Andrea viviani</p>
+        <p>Copyright &copy; Andrea Viviani</p>
     </footer>
 
 

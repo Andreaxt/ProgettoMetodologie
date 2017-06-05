@@ -91,7 +91,7 @@
 
 
 <footer class="footer">
-    <p>Copyright &copy; Andrea viviani</p>
+    <p>Copyright &copy; Andrea Viviani</p>
 </footer>
 
 

@@ -85,18 +85,8 @@ Footer
 .footer{background: #333;color:#fff; text-align: center;   padding: 1em;}
 
 /*-----------------------------
-Single
+Login page
 -----------------------------*/
-.panel{}
-.panel__copy{max-width: 800px; margin: 0px auto; margin-top: -60px; background: #fff; padding:20px 40px;position: relative; z-index: 1}
-.panel__copy__meta{font-weight: bold;font-size: 16px;	}
-.panel__copy__title{font-size: 32px;}
-
-
-
-
-.menu__navigazione{
-}
 
 .login__pagediv {
 
@@ -116,6 +106,9 @@ Single
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+/*-----------------------------
+Style per Login page
+-----------------------------*/
 
 .botton__submit{
     text-allign:center;
@@ -146,32 +139,9 @@ Single
     box-sizing: border-box;
 }
 
-div.table-title {
-    display: block;
-    margin: auto;
-    max-width: 600px;
-    padding:5px;
-    width: 100%;
-}
-
-.table-title h3 {
-    color: #fafafa;
-    font-size: 30px;
-    font-weight: 400;
-    font-style:normal;
-    font-family: "Roboto", helvetica, arial, sans-serif;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-    text-transform:uppercase;
-}
-.casella__password{
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+/*-----------------------------
+Tabelle email
+-----------------------------*/
 
 table {
     border-collapse: collapse;
