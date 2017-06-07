@@ -40,7 +40,7 @@ public class EmailUtility {
             while (rs.next()) //per passare alla prossima riga
 
             {
-                output = output.concat("<tr><td><p>" + rs.getString("destinatario") + "</p></td><td><p>" + rs.getString("oggetto") + "</p></td><td><p>" + rs.getString("testo") + "</p></td>");
+                output = output.concat("<tr><td><p>" + rs.getString("destinatario") + "</p></td><td><p>" + rs.getString("oggetto") + "</p></td><td><p>" + rs.getString("testo") + "</p></td><td><p>Elimina messaggio</td></p>");
 
             }
 
@@ -74,7 +74,7 @@ public class EmailUtility {
             while (rs.next()) //per passare alla prossima riga
 
             {
-                output = output.concat("<tr><td><p>" + rs.getString("mittente") + "</p></td><td><p>" + rs.getString("oggetto") + "</p></td><td><p>" + rs.getString("testo") + "</p></td>");
+                output = output.concat("<tr><td><p>" + rs.getString("mittente") + "</p></td><td><p>" + rs.getString("oggetto") + "</p></td><td><p>" + rs.getString("testo") + "</p></td><td><p>Elimina messaggio</td></p>");
 
             }
 

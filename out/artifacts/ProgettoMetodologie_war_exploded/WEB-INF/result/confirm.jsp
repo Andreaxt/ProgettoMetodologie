@@ -13,11 +13,32 @@
     <link href="style.css" rel="stylesheet" >
 </head>
 <body>
-
+<jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
 <div class="login__pagediv">
     <div class="div__login">
         <h1>Login effetuato con successo!</h1>
-        <h2> <a href="homeCoreSito.jsp">Accedi al sito</a></h2>
+        <%
+        String permessi = userCon.getPermessi();
+        boolean fatto= false;
+        if(permessi.equals("reg")){%>
+        <h2> <a href="homeRegione.jsp">Accedi al sito come regione</a></h2>
+
+        <%fatto=true;}
+
+        if(permessi.equals("tf")){%>
+        <h2> <a href="homeCoreSito.jsp">Accedi al sito come titolare </a></h2>
+
+        <% fatto=true;}
+
+        if(permessi.equals("df")) {%>
+        <h2> <a href="homeCoreSito.jsp">Accedi al sito come dottore </a></h2>
+        <% fatto= true;}
+
+         if(permessi.equals("ob"))   { fatto= true;%>
+        <h2> <a href="homeCoreSito.jsp">Accedi al sito come operatore di banco </a></h2>
+        <%}
+        %>
+
     </div>
 </div>
 
