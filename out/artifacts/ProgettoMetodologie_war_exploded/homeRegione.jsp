@@ -75,7 +75,7 @@
 
 <section class="cards clearfix">
     <div class="card">
-        <img class="card__image"  src="Image/MailImage.jpg" alt="Nature">
+        <img class="card__image"  src="Image/MailImage2.jpg" alt="Nature">
         <div class="card__copy">
             <h3><a href="emailPage.jsp"> Email Page </a></h3>
             <p> Invia email in modo sicuro e rapido ai tuoi colleghi!</p>
@@ -85,7 +85,7 @@
     <div class="card">
         <img class="card__image"  src="Image/farmaciaNegozio.jpg" alt="Nature">
         <div class="card__copy">
-            <h3><a href="emailPage.jsp">Crea una nuova Farmacia!</a></h3>
+            <h3><a href="newFarmaciaPage.jsp">Crea una nuova Farmacia!</a></h3>
             <p>Puoi creare una nuova farmacia e inizializzare un nuovo utente come titolare</p>
         </div>
     </div>

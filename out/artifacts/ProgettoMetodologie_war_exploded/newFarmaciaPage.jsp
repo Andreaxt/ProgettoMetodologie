@@ -1,24 +1,24 @@
 <%--
   Created by IntelliJ IDEA.
   User: Andrea
-  Date: 24/05/2017
-  Time: 14:40
+  Date: 07/06/2017
+  Time: 15:31
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>email</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="style.css">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
-
 <body>
 <jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
+
 
 <header class="header clearfix">
     <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>
@@ -47,60 +47,41 @@
 
 </header>
 
+<% if(userCon.getConnesso()&& userCon.getPermessi().equals("reg")){%>
+
+
+<div class="login__pagediv">
+    <form action="newFarm.do" method="post"  class="div__login" >
+        <p>Nome Farmacia:</p><input type="text" name="NomeFarmacia" class="casella__user"><br>
+        <p>indirizzo:</p><input type="text" class="casella__user" name="Indirizzo"/><br>
+        <p>Nome Titolare:</p><input type="text" name="NomeTitolare" class="casella__user"><br>
+        <p>Numero di telefono:</p><input type="text" name="NumeroDiTelefono" class="casella__user"><br>
+        <p>usernameTitolare:</p><input type="text" name="Username" class="casella__user"><br>
+        <p>password:</p><input type="password" name="Password" class="casella__user"><br>
+        <p>email:<p><input type="text" name="Email" class="casella__user"><br>
+        <input type="submit" id="invio" value="Invia" class="botton__submit">
+    </form>
+</div>
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-
-        $(".header__icon-bar").click(function(e){
-
-            $(".header__menu").toggleClass('is-open');
-            e.preventDefault();
-
-        });
-    });
-</script>
 
 
 
 
-<%
-    if(userCon.getConnesso()==true){
-%>
-
-<section class="cards clearfix">
-    <div class="card">
-        <img class="card__image"  src="Image/MailImage2.jpg" alt="Nature">
-        <div class="card__copy">
-            <h3><a href="emailPage.jsp"> Email Page </a></h3>
-            <p> Invia email in modo sicuro e rapido ai tuoi colleghi!</p>
+<%} else{ %>
+    <div class="login__pagediv">
+        <div class="div__login">
+            <h1>Utente non autenticato con successo!</h1>
+            <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
         </div>
     </div>
-</section>
+        <%
+    }%>
 
-<%
-    }
-    else {
-    %>
-<div class="login__pagediv">
-    <div class="div__login">
-        <h1>Utente non autenticato!</h1>
-        <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
-    </div>
-</div>
-    <%
-        }
-    %>
-
-
-<footer class="footer">
-    <p>Copyright &copy; Andrea Viviani</p>
-</footer>
+    <footer class="footer">
+        <p>Copyright &copy; Andrea Viviani</p>
+    </footer>
 
 
 </body>

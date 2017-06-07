@@ -19,5 +19,10 @@
         <action path="/newMsg" type="action.NewMsgAction">
             <forward name="success" path="/emailPage.jsp"/>
         </action>
+
+        <action path="/newFarm" type="action.NewFarmaciaAction">
+            <forward name="success" path="/homeRegione.jsp"/>
+        </action>
+
     </action-mappings>
 </struts-config>

@@ -39,6 +39,8 @@ public class NewMsgAction extends Action {
         int iduser=u.getUserId();
 
 
+
+
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
