@@ -7,7 +7,7 @@ public class UtenteConnesso implements java.io.Serializable {
     private String codUser;
     private boolean connesso;
     private String email;
-    private String permessi;
+    private String permessi="";
 
     public UtenteConnesso() {
         super();

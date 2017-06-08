@@ -32,16 +32,12 @@ public class NewFarmaciaAction extends Action{
         PreparedStatement st = null;
         ResultSet rs=null;
 
-        HttpSession session= request.getSession(true);
-        UtenteConnesso u = (UtenteConnesso)session.getAttribute("userCon");
-
 
 
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
-            System.out.println("connesisone effutata inzio query");
             String query="INSERT INTO farmacia (indirizzo,nomefarmacia,telefono,nome_titolare)VALUES (?,?,?,?) " ;
             st = conn.prepareStatement(query);
             st.setString(1,indirizzo);
@@ -54,23 +50,25 @@ public class NewFarmaciaAction extends Action{
             conn.close();
         }
         catch (Exception e) {
-            System.out.println("Impossibile connettersi al database nel metodo messaggio"+ e.getMessage() );
+            System.out.println("Impossibile connettersi al database nella prima query nuova farmacia: "+ e.getMessage() );
 
         }
 
-      /*  conn = null;
+        conn = null;
         rs=null;
         st = null;
+        System.out.println("valore di nomeFarmaciaNew"+ nomeFarmaciaNew);
 
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
-            System.out.println("connesisone effutata inzio query");
-            String query="SELECT id_farmacia FROM  farmacia WHERE nomefarmacia==?" ;
+
+            String query="SELECT id_farmacia FROM  farmacia WHERE nomefarmacia=?" ;
             st = conn.prepareStatement(query);
             st.setString(1,nomeFarmaciaNew);
             rs = st.executeQuery();
+
             while (rs.next()) //per passare alla prossima riga
 
             {
@@ -84,24 +82,25 @@ public class NewFarmaciaAction extends Action{
             System.out.println("Impossibile connettersi al database nel metodo messaggio"+ e.getMessage() );
 
         }
+        System.out.println("valore del id farmacia "+ idFarmacia);
 
         conn = null;
         rs=null;
         st = null;
-*/
+
 
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
             System.out.println("connesisone effutata inzio query");
-            String query="INSERT INTO utenti (username,password,email,permessi)VALUES (?,?,?,?) " ;
+            String query="INSERT INTO utenti (username,password,email,permessi,id_farmacia_lavoro)VALUES (?,?,?,?,?) " ;
             st = conn.prepareStatement(query);
             st.setString(1,usernameTtitolare);
             st.setString(2,password);
             st.setString(3,emailTitolare);
             st.setString(4,"tf");
-          //  st.setInt(5,idFarmacia);
+            st.setInt(5,idFarmacia);
 
             rs = st.executeQuery();
             rs.close();
@@ -109,7 +108,7 @@ public class NewFarmaciaAction extends Action{
             conn.close();
         }
         catch (Exception e) {
-            System.out.println("Impossibile connettersi al database nel metodo messaggio"+ e.getMessage() );
+            System.out.println("Impossibile connettersi al database nella terza query"+ e.getMessage() );
 
         }
 

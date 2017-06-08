@@ -34,8 +34,27 @@
             %>
 
 
+           <%   String permessi=userCon.getPermessi();
+               boolean fatto=false;
+               if(permessi.equals("reg")){%>
+            <li class="header__menu__item"><a href="homeRegione.jsp">AreaRiservata</a></li>
+
+            <%fatto=true;}
+                if(permessi.equals("tf")){%>
             <li class="header__menu__item"><a href="homeCoreSito.jsp">AreaRiservata</a></li>
-             <li class="header__menu__item"><a href="">Chi siamo</a></li>
+
+            <% fatto=true;}
+
+                if(permessi.equals("df")) {%>
+
+            <li class="header__menu__item"><a href="homeCoreSito.jsp">AreaRiservata</a></li>
+
+            <% fatto= true;}
+
+                if(permessi.equals("ob"))   { fatto= true;%>
+            <li class="header__menu__item"><a href="homeCoreSito.jsp">AreaRiservata</a></li>
+            <%}%>
+            <li class="header__menu__item"><a href="">Chi siamo</a></li>
          <li class="header__menu__item"><a href="">FAQ</a></li>
         </ul>
     </header>
