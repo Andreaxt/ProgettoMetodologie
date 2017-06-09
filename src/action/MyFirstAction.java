@@ -64,8 +64,7 @@ public class MyFirstAction extends Action{
             System.out.println("Impossibile connettersi al database"+ e.getMessage() );
 
         }
-        //(psw.trim().length()<1)
-        //bean
+
 
         if(!u.equals(email)||(email.trim().length()<1))
             return(mapping.findForward("bad-user"));

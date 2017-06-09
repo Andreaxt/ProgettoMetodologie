@@ -55,8 +55,8 @@ public class NewMsgAction extends Action {
             st.setInt(5,u.getUserId());
             st.setString(6,oggetto);
 
-            ResultSet rs = st.executeQuery();
-            rs.close();
+            st.executeUpdate();
+
             st.close();
             conn.close();
         }

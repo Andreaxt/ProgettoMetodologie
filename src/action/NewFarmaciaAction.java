@@ -44,8 +44,8 @@ public class NewFarmaciaAction extends Action{
             st.setString(2,nomeFarmaciaNew);
             st.setString(3,numeroDiTelefono);
             st.setString(4,nomeTitolare);
-            rs = st.executeQuery();
-            rs.close();
+             st.executeUpdate();
+
             st.close();
             conn.close();
         }
@@ -102,8 +102,8 @@ public class NewFarmaciaAction extends Action{
             st.setString(4,"tf");
             st.setInt(5,idFarmacia);
 
-            rs = st.executeQuery();
-            rs.close();
+            st.executeUpdate();
+
             st.close();
             conn.close();
         }
