@@ -47,7 +47,7 @@
 
         <%fatto=true;}
             if(permessi.equals("tf")){%>
-        <li class="header__menu__item"><a href="homeCoreSito.jsp">AreaRiservata</a></li>
+        <li class="header__menu__item"><a href="homeTitolareFarmacia.jsp">AreaRiservata</a></li>
 
         <% fatto=true;}
 

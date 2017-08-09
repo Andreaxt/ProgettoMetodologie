@@ -26,7 +26,7 @@
         <%fatto=true;}
 
         if(permessi.equals("tf")){%>
-        <h2> <a href="homeCoreSito.jsp">Accedi al sito come titolare </a></h2>
+        <h2> <a href="homeTitolareFarmacia.jsp">Accedi al sito come titolare </a></h2>
 
         <% fatto=true;}
 
