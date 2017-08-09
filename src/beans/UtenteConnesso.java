@@ -8,6 +8,7 @@ public class UtenteConnesso implements java.io.Serializable {
     private boolean connesso;
     private String email;
     private String permessi="";
+    private int id_farmacia=0;
 
     public UtenteConnesso() {
         super();
@@ -18,6 +19,15 @@ public class UtenteConnesso implements java.io.Serializable {
         this.connesso=false;
 
     }
+
+    public int getIdFarmacia() {
+        return id_farmacia;
+    }
+    public void setIdFarmacia(int id_farmacia)
+    {
+        this.id_farmacia = id_farmacia;
+    }
+
     public String getPermessi() {
         return permessi;
     }

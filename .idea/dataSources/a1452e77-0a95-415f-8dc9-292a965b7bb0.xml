@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-08-07.12:15:56.136</IntrospectionTimestamp>
-      <IntrospectionStateNumber>737</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-08-09.10:42:15.710</IntrospectionTimestamp>
+      <IntrospectionStateNumber>741</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -75,9 +75,9 @@
       <ObjectId>24974</ObjectId>
       <StateNumber>737</StateNumber>
     </table>
-    <table id="16" parent="3" name="magazino">
+    <table id="16" parent="3" name="magazzino">
       <ObjectId>25038</ObjectId>
-      <StateNumber>732</StateNumber>
+      <StateNumber>741</StateNumber>
     </table>
     <table id="17" parent="3" name="medico">
       <ObjectId>24985</ObjectId>

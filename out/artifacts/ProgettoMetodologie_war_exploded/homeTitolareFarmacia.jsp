@@ -85,7 +85,7 @@
     <div class="card">
         <img class="card__image"  src="Image/magazzino.jpg" alt="Nature">
         <div class="card__copy">
-            <h3><a href="buyPage.jsp">Riforinisci il magazzino!</a></h3>
+            <h3><a href="restoreWareHouseTF.jsp">Riforinisci il magazzino!</a></h3>
             <p>Puoi ordinare o reintegrare il magazzino in questa pagina.</p>
         </div>
     </div>

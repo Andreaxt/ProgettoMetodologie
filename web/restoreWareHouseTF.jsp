@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Utility.RestoreWareHouseUtility" %><%--
   Created by IntelliJ IDEA.
   User: Andrea
   Date: 07/08/2017
@@ -57,7 +57,22 @@
 
 <% if(permessi.equals("tf")){
   %>
-    <a> Ciao titolare!</a>
+
+<table class="table">
+    <div>
+        <h1>Medicinali Disponibili</h1>
+        <tr><th>Nome Farmaco</th><th>numero pezzi</th></tr>
+    </div>
+    <tbody>
+    <% int id_farmacia= userCon.getIdFarmacia(); %>
+    <% String result="";%>
+    <% RestoreWareHouseUtility mostra = new RestoreWareHouseUtility();%>
+    <%  result= mostra.GeneraTabellaMedicinaliMagazzino(id_farmacia); %>
+    <%=result%>
+    </tbody>
+
+</table>
+
 <%
     }
     else{

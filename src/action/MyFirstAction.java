@@ -25,6 +25,7 @@ public class MyFirstAction extends Action{
         String p="";
         String emailUtente="";
         String permessiUtente="";
+        int idFarmaciaLavoro=0;
         int id_utente=-1;
 
         try {
@@ -32,7 +33,7 @@ public class MyFirstAction extends Action{
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
 
-            String query="SELECT username , password, id_utente,email,permessi FROM utenti WHERE username=? AND PASSWORD=?";
+            String query="SELECT username , password, id_utente,email,permessi,id_farmacia_lavoro FROM utenti WHERE username=? AND PASSWORD=?";
             st = conn.prepareStatement(query);
             st.setString(1,email);
             st.setString(2,psw);
@@ -51,6 +52,8 @@ public class MyFirstAction extends Action{
                 emailUtente=rs.getString("email");
 
                 permessiUtente=rs.getString("permessi");
+
+                idFarmaciaLavoro=rs.getInt("id_farmacia_lavoro");
 
             }
             rs.close();
@@ -75,7 +78,7 @@ public class MyFirstAction extends Action{
             userCon.setConnesso(true);
             userCon.setEmail(emailUtente);
             userCon.setPermessi(permessiUtente);
-            System.out.println(userCon.getUserId());
+            userCon.setIdFarmacia(idFarmaciaLavoro);
             request.getSession().setAttribute("utenteConnesso", userCon);
             request.getSession().setAttribute("userCon", userCon);
 
