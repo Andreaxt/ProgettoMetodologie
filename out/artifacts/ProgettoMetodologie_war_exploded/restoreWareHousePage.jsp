@@ -12,16 +12,19 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="style.css">
-
+    <script src="library/jquery-3.2.1.min.js" ></script>
+    <script src="utilityJS/utilityRestoreWareHouse.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
 
+
+
 <header class="header clearfix">
 
-    <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>
+    <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>magazino_farmacia_id_farmacia_fk
     <a href="" class="header__icon-bar">
         <span></span>
         <span></span>

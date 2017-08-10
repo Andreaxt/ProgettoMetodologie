@@ -30,7 +30,7 @@ public class RestoreWareHouseUtility {
 
 
         String output="";
-        String query="SELECT farmaco.nome_farmaco , magazzino.disponibilita_pezzi FROM magazzino INNER JOIN  farmaco ON magazzino.id_farmaco=farmaco.id_farmaco WHERE magazzino.id_farmacia=?";
+        String query="SELECT farmaco.id_farmaco,farmaco.nome_farmaco , magazzino.disponibilita_pezzi FROM magazzino INNER JOIN  farmaco ON magazzino.id_farmaco=farmaco.id_farmaco WHERE magazzino.id_farmacia=?";
         try {
             st = conn.prepareStatement(query);
             st.setInt(1, id_farmacia);
@@ -40,7 +40,10 @@ public class RestoreWareHouseUtility {
             while (rs.next()) //per passare alla prossima riga
 
             {
-                output = output.concat("<tr><td><p>" + rs.getString(1) + "</p></td><td><p>" + rs.getString(2) + "</p></td></tr>");
+                output = output.concat("<tr><td><p>" + rs.getString(1) +
+                        "</p></td><td><p>" + rs.getString(2) +
+                        "</p></td><td><p>"+ rs.getString(3) +
+                        "</p></td></tr>");
 
             }
 
