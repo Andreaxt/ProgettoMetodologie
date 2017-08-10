@@ -42,7 +42,6 @@
 
         <%   String permessi=userCon.getPermessi();
             boolean fatto=false;
-
             if(permessi.equals("tf")){%>
         <li class="header__menu__item"><a href="homeTitolareFarmacia.jsp">AreaRiservata</a></li>
 
@@ -56,7 +55,7 @@
 </header>
 
 <% if(permessi.equals("tf")){
-  %>
+%>
 
 <table class="table">
     <div>
@@ -74,8 +73,8 @@
 </table>
 
 <%
-    }
-    else{
+}
+else{
 %>
 <div class="login__pagediv">
     <div class="div__login">
