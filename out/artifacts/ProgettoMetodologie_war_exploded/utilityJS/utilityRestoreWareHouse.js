@@ -7,9 +7,9 @@ $(document).ready(function () {
 
     $(".ordinare").click(function () { //classe del botone
         var elemento = $(this).attr('id').replace(/[^0-9]/g, ''); //id del tasto che clicki
-        var txt = $("input[name=ordina" + elemento + "]");//nome della textbox
+        var txt = $("input[name=ord" + elemento + "]");//nome della textbox
         var $tr = $(this).parents("tr");
-        var idprodotto= $tr.find("td").eq(0).html(); // idprodotto
+        var idprodotto= $tr.find("td").eq(0).html().replace(/[^0-9]/g, ''); // idprodotto
         $.post("restoreWareHousePage.jsp", {prodotto: idprodotto, valore: txt.val()}, function(){
             alert('Ordine effettuato con successo');
             location.reload();

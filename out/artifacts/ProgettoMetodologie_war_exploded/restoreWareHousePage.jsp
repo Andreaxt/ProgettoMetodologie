@@ -59,6 +59,12 @@
 
 <% if(permessi.equals("tf")){
 %>
+<% if (request.getParameter("prodotto") != null) {
+    RestoreWareHouseUtility reintegra = new RestoreWareHouseUtility();
+    reintegra.aggiungiProdotto(request.getParameter("prodotto"), request.getParameter("valore"), userCon.getIdFarmacia());
+}%>
+
+
 
 <table class="table">
     <div>
@@ -69,7 +75,7 @@
     <% int id_farmacia= userCon.getIdFarmacia(); %>
     <% String result="";%>
     <% RestoreWareHouseUtility mostra = new RestoreWareHouseUtility();%>
-    <%  result= mostra.GeneraTabellaMedicinaliMagazzino(id_farmacia); %>
+    <%  result= mostra.generaTabellaMedicinaliMagazzino(id_farmacia); %>
     <%=result%>
     </tbody>
 

@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-08-11.10:44:25.168</IntrospectionTimestamp>
-      <IntrospectionStateNumber>751</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-08-11.13:07:14.055</IntrospectionTimestamp>
+      <IntrospectionStateNumber>766</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -73,11 +73,11 @@
     </table>
     <table id="15" parent="3" name="farmaco">
       <ObjectId>24974</ObjectId>
-      <StateNumber>737</StateNumber>
+      <StateNumber>766</StateNumber>
     </table>
     <table id="16" parent="3" name="magazzino">
       <ObjectId>25038</ObjectId>
-      <StateNumber>749</StateNumber>
+      <StateNumber>766</StateNumber>
     </table>
     <table id="17" parent="3" name="medico">
       <ObjectId>24985</ObjectId>
@@ -196,8 +196,8 @@
       <DataType>integer|0</DataType>
       <StateNumber>732</StateNumber>
     </column>
-    <foreign-key id="39" parent="16" name="magazino_farmaco_id_farmaco_fk">
-      <ObjectId>25041</ObjectId>
+    <foreign-key id="39" parent="16" name="magazzino_farmaco_id_farmaco_fk">
+      <ObjectId>25169</ObjectId>
       <ColNames>id_farmaco_magazzino</ColNames>
       <RefTableName>farmaco</RefTableName>
       <RefKeyName>id_farmaco_pk</RefKeyName>
