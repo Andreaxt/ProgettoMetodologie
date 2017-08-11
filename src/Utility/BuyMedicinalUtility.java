@@ -30,7 +30,7 @@ public class BuyMedicinalUtility {
 
 
         String output="";
-        String query="SELECT farmaco.nome_farmaco , magazzino.disponibilita_pezzi,farmaco.costo FROM magazzino INNER JOIN  farmaco ON magazzino.id_farmaco=farmaco.id_farmaco WHERE magazzino.id_farmacia=?";
+        String query="SELECT farmaco.nome_farmaco , magazzino.disponibilita_pezzi,farmaco.costo FROM magazzino INNER JOIN  farmaco ON magazzino.id_farmaco_magazzino=farmaco.id_farmaco WHERE magazzino.id_farmacia=?";
         try {
             st = conn.prepareStatement(query);
             st.setInt(1, id_farmacia);

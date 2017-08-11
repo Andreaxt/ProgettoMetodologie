@@ -24,7 +24,7 @@
 
 <header class="header clearfix">
 
-    <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>magazino_farmacia_id_farmacia_fk
+    <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>
     <a href="" class="header__icon-bar">
         <span></span>
         <span></span>
@@ -62,8 +62,8 @@
 
 <table class="table">
     <div>
-        <h1>Medicinali Disponibili</h1>
-        <tr><th>Nome Farmaco</th><th>numero pezzi</th></tr>
+        <h1>Lista Prodotti In Magazzino</h1>
+        <tr><th>Id Farmaco</th><th>Nome Farmaco</th><th>numero pezzi</th><th>pezzi da ordinare</th><th>compra</th></tr>
     </div>
     <tbody>
     <% int id_farmacia= userCon.getIdFarmacia(); %>

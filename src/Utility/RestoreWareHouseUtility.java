@@ -28,9 +28,9 @@ public class RestoreWareHouseUtility {
 
     public String GeneraTabellaMedicinaliMagazzino(int id_farmacia){
 
-
+        int x=0;
         String output="";
-        String query="SELECT farmaco.id_farmaco,farmaco.nome_farmaco , magazzino.disponibilita_pezzi FROM magazzino INNER JOIN  farmaco ON magazzino.id_farmaco=farmaco.id_farmaco WHERE magazzino.id_farmacia=?";
+        String query="SELECT tabella.id_farmaco , tabella.nome_farmaco , tabella.disponibilita_pezzi FROM(SELECT * from farmaco LEFT JOIN magazzino ON farmaco.id_farmaco=magazzino.id_farmaco_magazzino)AS tabella WHERE id_farmacia=? OR id_farmacia ISNULL";
         try {
             st = conn.prepareStatement(query);
             st.setInt(1, id_farmacia);
@@ -43,7 +43,8 @@ public class RestoreWareHouseUtility {
                 output = output.concat("<tr><td><p>" + rs.getString(1) +
                         "</p></td><td><p>" + rs.getString(2) +
                         "</p></td><td><p>"+ rs.getString(3) +
-                        "</p></td></tr>");
+                        "</p></td><td><p><input type=\"number\" min=\"0\" max=\"100\" name=\"ord" + x + "\" size=\"3\">"+
+                        "</p></td><td><p> <input type=\"button\" id=\"ord"+x+"\" value=\"Ordina\" class=\"ordinare\"></p></td></tr>");
 
             }
 
