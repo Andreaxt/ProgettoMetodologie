@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Andrea
-  Date: 24/05/2017
-  Time: 14:40
+  Date: 07/06/2017
+  Time: 15:07
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -39,7 +39,7 @@
         <%
             }
         %>
-        <li class="header__menu__item"><a href="homeMedicoFarmacista.jsp">AreaRiservata</a></li>
+        <li class="header__menu__item"><a href="homeOperatoriBanco.jsp">AreaRiservata</a></li>
         <li class="header__menu__item"><a href="">Chi siamo</a></li>
         <li class="header__menu__item"><a href="">FAQ</a></li>
     </ul>
@@ -70,7 +70,7 @@
 
 
 <%
-    if(userCon.getConnesso()==true){
+    if(userCon.getConnesso()==true && userCon.getPermessi().equals("ob")){
 %>
 
 <section class="cards clearfix">
@@ -81,30 +81,29 @@
             <p> Invia email in modo sicuro e rapido ai tuoi colleghi!</p>
         </div>
     </div>
+
+
+
+
+
+
+
+
 </section>
 
 <%
-    }
-    else {
-    %>
+}
+else {
+%>
 <div class="login__pagediv">
     <div class="div__login">
         <h1>Utente non autenticato!</h1>
         <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
     </div>
-
-
-    <div class="card">
-        <img class="card__image"  src="Image/venditaImage.jpg" alt="Nature">
-        <div class="card__copy">
-            <h3><a href="buyMedicinalPage.jsp">Vendi prodotti!</a></h3>
-            <p>Procedi alla vendita dei tuoi prodotti!</p>
-        </div>
-    </div>
 </div>
-    <%
-        }
-    %>
+<%
+    }
+%>
 
 
 <footer class="footer">

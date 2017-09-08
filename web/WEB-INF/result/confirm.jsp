@@ -31,11 +31,11 @@
         <% fatto=true;}
 
         if(permessi.equals("df")) {%>
-        <h2> <a href="homeCoreSito.jsp">Accedi al sito come dottore </a></h2>
+        <h2> <a href="homeMedicoFarmacista.jsp">Accedi al sito come dottore </a></h2>
         <% fatto= true;}
 
          if(permessi.equals("ob"))   { fatto= true;%>
-        <h2> <a href="homeCoreSito.jsp">Accedi al sito come operatore di banco </a></h2>
+        <h2> <a href="homeOperatoriBanco.jsp">Accedi al sito come operatore di banco </a></h2>
         <%}
         %>
 
