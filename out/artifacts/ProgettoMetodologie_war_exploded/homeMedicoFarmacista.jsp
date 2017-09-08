@@ -92,6 +92,15 @@
         <h1>Utente non autenticato!</h1>
         <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
     </div>
+
+
+    <div class="card">
+        <img class="card__image"  src="Image/venditaImage.jpg" alt="Nature">
+        <div class="card__copy">
+            <h3><a href="buyMedicinalPage.jsp">Vendi prodotti!</a></h3>
+            <p>Procedi alla vendita dei tuoi prodotti!</p>
+        </div>
+    </div>
 </div>
     <%
         }

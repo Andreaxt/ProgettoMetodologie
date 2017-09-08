@@ -73,6 +73,7 @@
     if(userCon.getConnesso()==true && userCon.getPermessi().equals("tf")){
 %>
 
+
 <section class="cards clearfix">
     <div class="card">
         <img class="card__image"  src="Image/MailImage2.jpg" alt="Nature">
@@ -98,10 +99,23 @@
         </div>
     </div>
 
-
-
+    <div class="spazio_bianco"></div>
 
 </section>
+
+<section class="cards clearfix">
+    <div class="card">
+        <img class="card__image"  src="Image/assunzioni.jpg" alt="Nature">
+        <div class="card__copy">
+            <h3><a href="newUtentiFarmacia.jsp">Aggiungi qui i dipendeti!</a></h3>
+            <p>Registra sul sito i tuoi lavoratori!</p>
+        </div>
+    </div>
+
+</section>
+
+
+
 
 <%
 }

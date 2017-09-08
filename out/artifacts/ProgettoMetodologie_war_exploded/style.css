@@ -84,6 +84,21 @@ Footer
 
 .footer{background: #333;color:#fff; text-align: center;   padding: 1em;}
 
+
+
+/*-----------------------------
+div spazio bianco
+-----------------------------*/
+
+
+.spazio_bianco {
+
+    height: 10px;
+
+}
+
+
+
 /*-----------------------------
 Login page
 -----------------------------*/
