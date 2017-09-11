@@ -78,9 +78,10 @@
 
 </header>
 
+<%if(userCon.getPermessi().equals("reg")){%>
 
 <div class="login__pagediv">
-    <form action="newMsg.do" method="post"  class="div__login" >
+    <form action="newMsgAll.do" method="post"  class="div__login" >
 
         Invia a:<select name="soggetto">
             <option value="tf">Titolare Farmacia</option>
@@ -88,7 +89,7 @@
         </select><br>
 
         Farmacia:<select name="impiego">
-            <option value="ob">Tutte le farmacie</option>
+            <option value="allFarm">Tutte le farmacie</option>
         <%
 
             Connection conn = null;
@@ -108,7 +109,7 @@
 
                 {
                  %>
-                        <option value="farm"> <%=rs.getString(1)%></option>
+                        <option value="<%=rs.getString(1)%>"> <%=rs.getString(1)%></option>
                 <%
 
                 }
@@ -131,6 +132,19 @@
         <input type="submit" id="invio" value="Invia" class="botton__submit">
     </form>
 </div>
+
+<%}
+else {
+%>
+<div class="login__pagediv">
+    <div class="div__login">
+        <h1>Utente non autenticato!</h1>
+        <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
+    </div>
+</div>
+<%
+    }
+%>
 
 <footer class="footer">
     <p>Copyright &copy; Andrea Viviani</p>

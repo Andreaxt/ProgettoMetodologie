@@ -29,6 +29,11 @@
             <forward name="success" path="/homeTitolareFarmacia.jsp"/>
         </action>
 
+        <action path="/newMsgAll" type="action.MsgReg">
+            <forward name="success" path="/msgTargetReg.jsp"/>
+        </action>
+
+
 
     </action-mappings>
 </struts-config>
