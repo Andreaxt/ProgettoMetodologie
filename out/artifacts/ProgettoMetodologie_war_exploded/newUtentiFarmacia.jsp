@@ -77,10 +77,14 @@
 <% if(permessi.equals("tf")){ %>
 
 <div class="login__pagediv">
-    <form action="newMsg.do" method="post"  class="div__login" >
-        Invia a:<input type="text" name="destinatario" class="casella__user"><br>
-        Oggetto:<input type="text" class="casella__user" name="oggetto"/><br>
-        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
+    <form action="newUtente.do" method="post"  class="div__login" >
+        User utente:<input type="text" name="user" class="casella__user"><br>
+        password user:<input type="text" class="casella__user" name="psw"/><br>
+        email:<input type="text" class="casella__user" name="email"/><br>
+        impiego:<select name="impiego">
+        <option value="ob">operatore di banco</option>
+        <option value="dc">dottore farmacista</option>
+        </select><br>
         <input type="submit" id="invio" value="Invia" class="botton__submit">
     </form>
 </div>

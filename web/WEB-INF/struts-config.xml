@@ -24,5 +24,11 @@
             <forward name="success" path="/homeRegione.jsp"/>
         </action>
 
+
+        <action path="/newUtente" type="action.NewInsertUserAction">
+            <forward name="success" path="/homeTitolareFarmacia.jsp"/>
+        </action>
+
+
     </action-mappings>
 </struts-config>

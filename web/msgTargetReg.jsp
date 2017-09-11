@@ -1,3 +1,7 @@
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.DriverManager" %>
 <%--
   Created by IntelliJ IDEA.
   User: Andrea
@@ -74,32 +78,59 @@
 
 </header>
 
-<% if(permessi.equals("tf")){ %>
 
 <div class="login__pagediv">
-    <form action="newUtente.do" method="post"  class="div__login" >
-        User utente:<input type="text" name="user" class="casella__user"><br>
-        password user:<input type="text" class="casella__user" name="psw"/><br>
-        email:<input type="text" class="casella__user" name="email"/><br>
-        impiego:<select name="impiego">
-        <option value="ob">operatore di banco</option>
-        <option value="dc">dottore farmacista</option>
+    <form action="newMsg.do" method="post"  class="div__login" >
+
+        Invia a:<select name="soggetto">
+            <option value="tf">Titolare Farmacia</option>
+            <option value="all">Tutti</option>
         </select><br>
+
+        Farmacia:<select name="impiego">
+            <option value="ob">Tutte le farmacie</option>
+        <%
+
+            Connection conn = null;
+            PreparedStatement st = null;
+            ResultSet rs=null;
+
+            try {
+                Class.forName("org.postgresql.Driver");
+                conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
+
+                String query="SELECT nomefarmacia from farmacia";
+                st = conn.prepareStatement(query);
+                rs = st.executeQuery();
+                String output = "";
+
+                while (rs.next()) //per passare alla prossima riga
+
+                {
+                 %>
+                        <option value="farm"> <%=rs.getString(1)%></option>
+                <%
+
+                }
+
+            }
+            catch (Exception e) {
+                System.out.println("Impossibile connettersi al database nella prima query nuovo utente: "+ e.getMessage() );
+
+            }
+
+
+        %>
+    </select><br>
+
+
+
+
+        Oggetto:<input type="text" class="casella__user" name="oggetto"/><br>
+        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
         <input type="submit" id="invio" value="Invia" class="botton__submit">
     </form>
 </div>
-
-<% }
-
-else{ %>
-<div class="login__pagediv">
-    <div class="div__login">
-        <h1>Utente non autenticato con successo!</h1>
-        <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
-    </div>
-</div>
-
-<% }%>
 
 <footer class="footer">
     <p>Copyright &copy; Andrea Viviani</p>
