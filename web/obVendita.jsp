@@ -1,26 +1,30 @@
-<%--
+<%@ page import="Utility.BuyMedicinalOb" %>
+<%@ page import="Utility.BuyMedicinalUtility" %><%--
   Created by IntelliJ IDEA.
   User: Andrea
-  Date: 07/06/2017
-  Time: 15:07
+  Date: 07/08/2017
+  Time: 11:44
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>CompraProdotti</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="library/jquery-3.2.1.min.js" ></script>
+    <script src="utilityJS/utilityRestoreWareHouse.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
-
 <body>
 <jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
 
+
+
 <header class="header clearfix">
+
     <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>
     <a href="" class="header__icon-bar">
         <span></span>
@@ -39,73 +43,54 @@
         <%
             }
         %>
+
+        <%   String permessi=userCon.getPermessi();
+            boolean fatto=false;
+            if(permessi.equals("ob")){%>
         <li class="header__menu__item"><a href="homeOperatoriBanco.jsp">AreaRiservata</a></li>
+
+        <% fatto=true;}
+        %>
+
         <li class="header__menu__item"><a href="">Chi siamo</a></li>
         <li class="header__menu__item"><a href="">FAQ</a></li>
     </ul>
 
-
 </header>
 
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-
-        $(".header__icon-bar").click(function(e){
-
-            $(".header__menu").toggleClass('is-open');
-            e.preventDefault();
-
-        });
-    });
-</script>
-
-
-
-
-<%
-    if(userCon.getConnesso()==true && userCon.getPermessi().equals("ob")){
+<% if(permessi.equals("ob")){
 %>
 
-<section class="cards clearfix">
-    <div class="card">
-        <img class="card__image"  src="Image/MailImage2.jpg" alt="Nature">
-        <div class="card__copy">
-            <h3><a href="emailPage.jsp"> Email Page </a></h3>
-            <p>visualizza le email mandate e ricevute</p>
-        </div>
+<table class="table">
+    <div>
+        <h1>Medicinali Disponibili</h1>
+        <tr><th>Nome Farmaco</th><th>numero pezzi</th><th>prezzo</th></tr>
     </div>
+    <tbody>
+    <% int id_farmacia= userCon.getIdFarmacia(); %>
+    <% String result="";%>
+    <% BuyMedicinalOb mostra = new BuyMedicinalOb();%>
+    <%  result= mostra.VendiMedicinali(id_farmacia); %>
+    <%=result%>
+    </tbody>
 
-
-    <div class="card">
-        <img class="card__image"  src="Image/venditaImage.jpg" alt="Nature">
-        <div class="card__copy">
-            <h3><a href="obVendita.jsp">Vendi prodotti!</a></h3>
-            <p>Procedi alla vendita dei tuoi prodotti!</p>
-        </div>
-    </div>
-
-</section>
+</table>
 
 <%
 }
-else {
+else{
 %>
 <div class="login__pagediv">
     <div class="div__login">
-        <h1>Utente non autenticato!</h1>
-        <h2> <a href="LoginPage.jsp">Torna alla pagina di login</a></h2>
+        <h1>Conenuto pagina non accessibile con le tue credenziali!</h1>
+        <h2> <a href="index.jsp">Torna alla home</a></h2>
     </div>
 </div>
+
 <%
     }
 %>
+
 
 
 <footer class="footer">

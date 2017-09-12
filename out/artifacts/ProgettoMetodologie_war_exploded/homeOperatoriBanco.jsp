@@ -83,11 +83,13 @@
     </div>
 
 
-
-
-
-
-
+    <div class="card">
+        <img class="card__image"  src="Image/venditaImage.jpg" alt="Nature">
+        <div class="card__copy">
+            <h3><a href="obVendita.jsp">Vendi prodotti!</a></h3>
+            <p>Procedi alla vendita dei tuoi prodotti!</p>
+        </div>
+    </div>
 
 </section>
 
