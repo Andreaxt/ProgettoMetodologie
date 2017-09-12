@@ -27,7 +27,7 @@ public class NewMsgAction extends Action {
         PreparedStatement st = null;
         int id_utente=-1;
         System.out.println("Stampo il testo del messaggio"+testo);
-
+        ResultSet rs=null;
 
         java.sql.Date odierna = new java.sql.Date(Calendar.getInstance().getTime().getTime());
 
@@ -39,32 +39,82 @@ public class NewMsgAction extends Action {
         int iduser=u.getUserId();
 
 
+        if(!destinatario.equals("allFarm")) {
+
+            try {
+                Class.forName("org.postgresql.Driver");
+                conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
+
+                System.out.println("connesisone effutata inzio query");
+                String query = "INSERT INTO messaggi (testo,mittente ,destinatario,data,id_utente,oggetto)VALUES (?,?,?,?,?,?) ";
+                st = conn.prepareStatement(query);
+                st.setString(1, testo);
+                st.setString(2, u.getEmail());
+                st.setString(3, destinatario);
+                st.setDate(4, odierna);
+                st.setInt(5, u.getUserId());
+                st.setString(6, oggetto);
+
+                st.executeUpdate();
+
+                st.close();
+                conn.close();
+            } catch (Exception e) {
+                System.out.println("Impossibile connettersi al database nel metodo messaggio" + e.getMessage());
+
+            }
+        }//fine if
+        else{
+            try {
+                Class.forName("org.postgresql.Driver");
+                conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
 
 
-        try {
-            Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
+                String query="SELECT email from utenti where id_farmacia_lavoro=? AND id_utente!=?" ;
+                st = conn.prepareStatement(query);
+                st.setInt(1,u.getIdFarmacia());
+                st.setInt(2,u.getUserId());
 
-            System.out.println("connesisone effutata inzio query");
-            String query="INSERT INTO messaggi (testo,mittente ,destinatario,data,id_utente,oggetto)VALUES (?,?,?,?,?,?) " ;
-            st = conn.prepareStatement(query);
-            st.setString(1,testo);
-            st.setString(2,u.getEmail());
-            st.setString(3,destinatario);
-            st.setDate(4,odierna);
-            st.setInt(5,u.getUserId());
-            st.setString(6,oggetto);
+                rs = st.executeQuery();
 
-            st.executeUpdate();
+                while (rs.next()) //per passare alla prossima riga
 
-            st.close();
-            conn.close();
-        }
-        catch (Exception e) {
-            System.out.println("Impossibile connettersi al database nel metodo messaggio"+ e.getMessage() );
+                {
+                    destinatario = rs.getString("email");
 
-        }
 
+
+                    try {
+                        PreparedStatement st2 = null;
+                        String query2="INSERT INTO messaggi (testo,mittente,destinatario,data,oggetto,id_utente)VALUES(?,?,?,?,?,?) " ;
+                        st2 = conn.prepareStatement(query2);
+                        st2.setString(1,testo);
+                        st2.setString(2,nomeUser);
+                        st2.setString(3,destinatario);
+                        st2.setDate(4,odierna);
+                        st2.setString(5,oggetto);
+                        st2.setInt(6,u.getUserId());
+                        st2.executeUpdate();
+
+                        st2.close();
+
+                    }
+                    catch (Exception e) {
+                        System.out.println("Impossibile connettersi al datab nel while primo if tf: "+ e.getMessage() );
+
+                    }
+                }// fine while
+
+                rs.close();
+                st.close();
+                conn.close();
+            }//fine try
+            catch (Exception e) {
+                System.out.println("Impossibile connettersi al database primo if all"+ e.getMessage() );
+
+            }
+
+        }//fine else
 
         return mapping.findForward("success");
     }

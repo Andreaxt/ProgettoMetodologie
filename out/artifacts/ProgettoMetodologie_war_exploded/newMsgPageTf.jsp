@@ -83,6 +83,7 @@
 
         Invia a:<select name="destinatario">
         <option value="regionePiemonte@gmail.com">Regione</option>
+        <option value="allFarm">tutti i dipendenti</option>
 
         <%
 

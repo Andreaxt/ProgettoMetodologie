@@ -1,3 +1,4 @@
+
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
@@ -82,7 +83,6 @@
     <form action="newMsg.do" method="post"  class="div__login" >
 
         Invia a:<select name="destinatario">
-        <option value="regionePiemonte@gmail.com">Regione</option>
         <option value="allFarm">tutti i dipendenti</option>
 
         <%
@@ -120,12 +120,12 @@
         %>
     </select><br>
 
-    </select><br>
+        </select><br>
 
 
 
         Oggetto:<input type="text" class="casella__user" name="oggetto"/><br>
-       <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
+        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
         <input type="submit" id="invio" value="Invia" class="botton__submit">
     </form>
 </div>

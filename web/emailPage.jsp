@@ -82,12 +82,12 @@ if(permessi.equals("reg")){%>
 
     if(permessi.equals("df")) {%>
 
-<h1><a href="newMsgPageTf.jsp">Nuovo Messaggio</a></h1>
+<h1><a href="newMsgPageob.jsp">Nuovo Messaggio</a></h1>
 
 <% }
 
     if(permessi.equals("ob"))   {%>
-<h1><a href="newMsgPageTf.jsp">Nuovo Messaggio</a></h1>
+<h1><a href="newMsgPageOb.jsp">Nuovo Messaggio</a></h1>
 <%}%>
 
 
