@@ -78,7 +78,7 @@
         <img class="card__image"  src="Image/MailImage2.jpg" alt="Nature">
         <div class="card__copy">
             <h3><a href="emailPage.jsp"> Email Page </a></h3>
-            <p> Invia email in modo sicuro e rapido ai tuoi colleghi!</p>
+            <p>visualizza le email mandate e ricevute</p>
         </div>
     </div>
 

@@ -77,8 +77,8 @@
     <div class="card">
         <img class="card__image"  src="Image/MailImage2.jpg" alt="Nature">
         <div class="card__copy">
-            <h3><a href="msgTargetReg.jsp"> Email Page </a></h3>
-            <p> Invia email in modo sicuro e rapido ai titolari o a tutti!</p>
+            <h3><a href="emailPage.jsp"> Email Page </a></h3>
+            <p> visualizza le email mandate e ricevute</p>
         </div>
     </div>
 

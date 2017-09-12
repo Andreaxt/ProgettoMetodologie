@@ -68,13 +68,36 @@
 
 </header>
 
-<% if(userCon.getConnesso()){%>
+<%if(userCon.getConnesso()==true){ %>
 
-<h1><a href="newMsgPage.jsp">Nuovo Messaggio</a></h1>
+<%
+if(permessi.equals("reg")){%>
+<h1><a href="msgTargetReg.jsp">Nuovo Messaggio</a></h1>
+
+<%}
+    if(permessi.equals("tf")){%>
+<h1><a href="newMsgPageTf.jsp">Nuovo Messaggio</a></h1>
+
+<% }
+
+    if(permessi.equals("df")) {%>
+
+<h1><a href="newMsgPageTf.jsp">Nuovo Messaggio</a></h1>
+
+<% }
+
+    if(permessi.equals("ob"))   {%>
+<h1><a href="newMsgPageTf.jsp">Nuovo Messaggio</a></h1>
+<%}%>
+
+
+
+
+
 <table class="table" >
     <div>
         <h1>Posta Ricevuta</h1>
-    <tr><th>Mittente</th><th>Oggetto</th><th>Testo</th><th>elimina</th></tr>
+    <tr><th>Mittente</th><th>Oggetto</th><th>Testo</th></tr>
     </div>
     <tbody>
         <%String user= userCon.getEmail();%>
@@ -89,7 +112,7 @@
     <table class="table">
         <div>
             <h1>Posta Inviata</h1>
-            <tr><th>Destinatario</th><th>Oggetto</th><th>Testo</th><th>elimina</th></tr>
+            <tr><th>Destinatario</th><th>Oggetto</th><th>Testo</th></tr>
         </div>
         <tbody>
         <% user= userCon.getEmail(); %>

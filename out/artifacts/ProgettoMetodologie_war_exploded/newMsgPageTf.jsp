@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Connection" %><%--
   Created by IntelliJ IDEA.
   User: Andrea
   Date: 05/06/2017
@@ -77,7 +80,49 @@
 
 <div class="login__pagediv">
     <form action="newMsg.do" method="post"  class="div__login" >
-        Invia a:<input type="text" name="destinatario" class="casella__user"><br>
+
+        Invia a:<select name="destinatario">
+        <option value="regionePiemonte@gmail.com">Regione</option>
+
+        <%
+
+            Connection conn = null;
+            PreparedStatement st = null;
+            ResultSet rs=null;
+
+            try {
+                Class.forName("org.postgresql.Driver");
+                conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
+
+                String query="SELECT email from utenti where id_farmacia_lavoro=?";
+                st = conn.prepareStatement(query);
+                st.setInt(1,userCon.getIdFarmacia());
+                rs = st.executeQuery();
+                String output = "";
+
+                while (rs.next()) //per passare alla prossima riga
+
+                {
+        %>
+        <option value="<%=rs.getString(1)%>"> <%=rs.getString(1)%></option>
+        <%
+
+                }
+
+            }
+            catch (Exception e) {
+                System.out.println("Impossibile connettersi al database nella prima query nuovo utente: "+ e.getMessage() );
+
+            }
+
+
+        %>
+    </select><br>
+
+    </select><br>
+
+
+
         Oggetto:<input type="text" class="casella__user" name="oggetto"/><br>
        <p>Testo:</p><textarea  style="resize:none" cols="30" rows="10" class="casella__password" name="testo"></textarea><br>
         <input type="submit" id="invio" value="Invia" class="botton__submit">
