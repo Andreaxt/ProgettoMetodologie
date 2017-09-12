@@ -1,0 +1,147 @@
+create table utenti
+(
+	username varchar(20) not null,
+	password varchar(20) not null,
+	email varchar(100) not null,
+	permessi varchar(30) not null,
+	id_utente serial not null
+		constraint id_utente_pk
+			primary key,
+	id_farmacia_lavoro integer
+)
+;
+
+create index fki_id_farmacia_fk
+	on utenti (id_farmacia_lavoro)
+;
+
+create table farmacia
+(
+	id_farmacia serial not null
+		constraint farmacia_pkey
+			primary key,
+	indirizzo varchar(50) not null,
+	nomefarmacia varchar(50) not null,
+	telefono varchar(15) not null,
+	nome_titolare varchar(50) not null
+)
+;
+
+alter table utenti
+	add constraint id_farmacia_fk
+		foreign key (id_farmacia_lavoro) references farmacia
+;
+
+create table messaggi
+(
+	testo varchar(100000) not null,
+	mittente varchar(50) not null,
+	destinatario varchar(50) not null,
+	id_messaggi serial not null
+		constraint messaggi_pkey
+			primary key,
+	data date not null,
+	id_utente integer not null
+		constraint id_utente_fk
+			references utenti,
+	oggetto varchar(50) not null
+)
+;
+
+create index fki_id_utente_fk
+	on messaggi (id_utente)
+;
+
+create table farmaco
+(
+	id_farmaco serial not null
+		constraint id_farmaco_pk
+			primary key,
+	nome_farmaco varchar(50) not null,
+	abilitazione varchar(2),
+	costo double precision
+)
+;
+
+create table paziente
+(
+	nome varchar(50),
+	cognome varchar(50),
+	codice_fiscale varchar(11) not null
+		constraint paziente_pkey
+			primary key
+)
+;
+
+create table medico
+(
+	nome varchar(50) not null,
+	cognome varchar(50) not null,
+	codice_medico integer not null
+		constraint medico_pkey
+			primary key
+)
+;
+
+create table ricetta
+(
+	id_ricetta serial not null
+		constraint ricetta_pkey
+			primary key,
+	data_ricetta date,
+	id_farmaco integer,
+	cod_medico integer
+		constraint ricetta_medico_codice_medico_fk
+			references medico,
+	cf_paz varchar(11)
+		constraint ricetta_paziente_codice_fiscale_fk
+			references paziente
+)
+;
+
+create table vendita
+(
+	quantita integer,
+	id_farmaco integer
+		constraint vendita_farmaco_id_farmaco_fk
+			references farmaco,
+	paz_cf varchar(11)
+		constraint vendita_paziente_codice_fiscale_fk
+			references paziente,
+	id_venditore integer
+		constraint vendita_utenti_id_utente_fk
+			references utenti,
+	id_farmacia integer
+		constraint vendita_farmacia_id_farmacia_fk
+			references farmacia,
+	date date,
+	id_vendita integer not null
+		constraint vendita_id_vendita_pk
+			primary key
+)
+;
+
+create table magazzino
+(
+	disponibilita_pezzi integer,
+	id_farmaco_magazzino integer
+		constraint magazzino_farmaco_id_farmaco_fk
+			references farmaco,
+	id_farmacia integer
+		constraint magazzino_farmacia_id_farmacia_fk
+			references farmacia
+)
+;
+
+create table storico
+(
+	quantita integer,
+	id_prodotto integer
+		constraint storico_farmaco_id_farmaco_fk
+			references farmaco,
+	id_vendita integer
+		constraint storico_vendita_id_vendita_fk
+			references vendita
+)
+;
+

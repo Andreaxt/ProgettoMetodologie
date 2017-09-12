@@ -33,6 +33,7 @@
             <forward name="success" path="/msgTargetReg.jsp"/>
         </action>
 
+        <action path="/startsell" type="actions.StartSellAction"/>
 
 
     </action-mappings>
