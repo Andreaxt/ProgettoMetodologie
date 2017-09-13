@@ -27,44 +27,31 @@ public class BuyMedicinalOb {
         }
     }
 
-    public String VendiMedicinali(int id_farmacia) {
+    public String VendiMedicinali(int farmacia,String permessi) {
+        String query;
 
+        if (!permessi.equals("ob")) {
+            query = "SELECT farmaco.id_farmaco, farmaco.nome_farmaco, farmaco.abilitazione, farmaco.costo, magazzino.disponibilita_pezzi FROM farmaco JOIN magazzino ON farmaco.id_farmaco = magazzino.id_farmaco_magazzino WHERE id_farmacia=? AND magazzino.disponibilita_pezzi>0";
+        } else
+            query = "SELECT farmaco.id_farmaco, farmaco.nome_farmaco, farmaco.abilitazione, farmaco.costo, magazzino.disponibilita_pezzi FROM farmaco JOIN magazzino ON farmaco.id_farmaco = magazzino.id_farmaco_magazzino WHERE id_farmacia=? AND farmaco.abilitazione='ob' AND magazzino.disponibilita_pezzi>0";
+        String out = "";
 
-        String output = "";
-        String query = "SELECT farmaco.nome_farmaco ,magazzino.disponibilita_pezzi ,farmaco.costo FROM farmaco JOIN magazzino ON farmaco.id_farmaco=magazzino.id_farmaco_magazzino WHERE magazzino.id_farmacia=? AND farmaco.abilitazione='ob'";
         try {
-
             st = conn.prepareStatement(query);
-            st.setInt(1, id_farmacia);
-
-            ResultSet rs = st.executeQuery();
-
-            while (rs.next()) //per passare alla prossima riga
-
-            {
-                output = output.concat("<tr><td><p>" + rs.getString(1) + "</p></td><td><p>");
-
-                int i = 0;
-                int n = rs.getInt(2);
-                output = output.concat("<select name=\"selQuant\">");
-                for (i = 0; i <= n; i++) {
-                    output = output.concat("<option>" + i + "</option>");
-                }
-                output = output.concat("</select></p></td><td><p>" + rs.getString(3) + "£</p></td></tr>");
-
-                output = output.concat("");
-
+            st.setInt(1, farmacia);
+            rs = st.executeQuery();
+            int x = 0;
+            while (rs.next()) {
+                out = out.concat("<tr><td><p>" + rs.getInt(1) + "</p></td><td><p>" + rs.getString(2) + "</p></td>");
+                if (!permessi.equals("ob"))
+                    out = out.concat("<td><p>" + rs.getBigDecimal(3) + "</p></td>");
+                out = out.concat("<td><p>" + rs.getBigDecimal(4) + " &#8364</p></td><td>" + rs.getInt(5) + "</p></td><td><p><input type=\"text\" name=\"ordina" + x + "\" size=\"3\" id=\"ordina" + x + "\" value=\"0\" class=\"ordina\"><input class=\"add\"type=\"button\" id=\"add" + x + "\" value=\"+\"><input class=\"sub\"type=\"button\" id=\"sub" + x++ + "\" value=\"-\">");
             }
 
-            rs.close();
-            st.close();
-            conn.close();
         } catch (Exception e) {
-            System.out.println("Impossibile connettersi al database" + e.getMessage());
-
+            e.printStackTrace();
         }
-
-        return output;
+        return out;
     }
 
     public String listaAcquisto(ListaProdotti acquisto) {
@@ -103,6 +90,16 @@ public class BuyMedicinalOb {
             e.printStackTrace();
         }
         return String.valueOf(out) + " €";
+    }
+
+    public void close() {
+        try {
+            rs.close();
+            st.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

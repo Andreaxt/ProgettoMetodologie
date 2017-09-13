@@ -1,5 +1,5 @@
 <%@ page import="Utility.BuyMedicinalOb" %>
-<%@ page import="Utility.BuyMedicinalUtility" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Andrea
   Date: 07/08/2017
@@ -61,20 +61,24 @@
 <% if(permessi.equals("ob")){
 %>
 
-<table class="table">
-    <div>
-        <h1>Medicinali Disponibili</h1>
-        <tr><th>Nome Farmaco</th><th>numero pezzi</th><th>prezzo</th></tr>
-    </div>
+<table id="lm">
+    <thead>
+    <tr>
+        <th>Codice Prodottto</th>
+        <th>Nome prodotto</th>
+        <%if (!userCon.getPermessi().equals("ob")) %><th>Ricetta</th>
+        <th>Prezzo</th>
+        <th>Quantità</th>
+        <th></th>
+    </tr>
+    </thead>
     <tbody>
-    <% int id_farmacia= userCon.getIdFarmacia(); %>
-    <% String result="";%>
-    <% BuyMedicinalOb mostra = new BuyMedicinalOb();%>
-    <%  result= mostra.VendiMedicinali(id_farmacia); %>
-    <%=result%>
+    <% BuyMedicinalOb vendita = new BuyMedicinalOb();%>
+    <%=vendita.VendiMedicinali(userCon.getIdFarmacia(), userCon.getPermessi())%>
+    <%vendita.close();%>
     </tbody>
-
 </table>
+<input class="vendi" type="button" id="vendi" value="vendi" style="float:right;">
 
 <%
 }
