@@ -1,4 +1,5 @@
 <%@ page import="Utility.BuyMedicinalOb" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Andrea
@@ -14,7 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="style.css">
     <script src="library/jquery-3.2.1.min.js" ></script>
-    <script src="utilityJS/utilityRestoreWareHouse.js"></script>
+
+    <script src="utilityJS/utilityBuyOb.js"></script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -78,7 +81,7 @@
     <%vendita.close();%>
     </tbody>
 </table>
-<input class="vendi" type="button" id="vendi" value="vendi" style="float:right;">
+<input  type="button" class="vendi" id="vendi" value="vendi" style="float:right;">
 
 <%
 }

@@ -2,7 +2,7 @@ package Utility;
 
 import beans.Farmaco;
 import beans.ListaProdotti;
-
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
