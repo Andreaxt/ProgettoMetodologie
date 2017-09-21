@@ -1,5 +1,29 @@
 package action;
 
+/**
+ * Created by Andrea on 14/09/2017.
+ */
+
+import beans.Farmaco;
+import beans.ListaProdotti;
+import beans.UtenteConnesso;
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.HashMap;
+
 import beans.ListaProdotti;
 import beans.UtenteConnesso;
 import com.sun.corba.se.spi.presentation.rmi.IDLNameTranslator;
@@ -21,11 +45,13 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class SellActionOb extends Action {
+public class SellActionDf extends Action {
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
         int[] idprodotti = Arrays.stream(request.getParameterValues("prodotti")).mapToInt(Integer::parseInt).toArray();
         int[] quantita = Arrays.stream(request.getParameterValues("quantita")).mapToInt(Integer::parseInt).toArray();
+
+        System.out.println("entrato in sell actionOb");
 
         HttpSession session= request.getSession(true);
         UtenteConnesso u = (UtenteConnesso)session.getAttribute("userCon");
@@ -33,28 +59,30 @@ public class SellActionOb extends Action {
         Connection connection = null;
         ResultSet resultSet = null;
         PreparedStatement statement = null;
-
         ListaProdotti prodottiAcquistati = new ListaProdotti();
         boolean fail = false;
         String query;
         int result = -1;
+        //id acquisto;
         int id = -1;
         Integer x , y;
         boolean richiedeRicetta = false;
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Db_Farmacia", "postgres", "$Postgres22.");
+
+            //Controllo che non ci siano ricette nell'acquisto
             query = "SELECT id_farmaco,abilitazione FROM Farmaco WHERE abilitazione='df'";
             statement = connection.prepareStatement(query);
             resultSet = statement.executeQuery();
             HashMap<Integer, Integer> hashMap = new HashMap<>(); //HashMap prodotto- ricetta
             while (resultSet.next()) {
-                 x=resultSet.getInt(1);
+                x=resultSet.getInt(1);
                 if(resultSet.getString(2).equals("ob")){
                     y=0;
                 }
                 else{
-                     y=1;
+                    y=1;
                 }
                 hashMap.put(x,y);
             }
@@ -66,6 +94,7 @@ public class SellActionOb extends Action {
             }
 
             if (!richiedeRicetta) {
+                //NUOVO ACQUISTO
                 query = "INSERT INTO vendita ( date, id_venditore, paz_cf) VALUES (?,?,NULL )";
                 statement = connection.prepareStatement(query,statement.RETURN_GENERATED_KEYS);
                 java.sql.Date odierna = new java.sql.Date(Calendar.getInstance().getTime().getTime());
@@ -92,28 +121,33 @@ public class SellActionOb extends Action {
                     }
 
 
-                            for (int i = 0; i < idprodotti.length; i++) {
-                                query = "UPDATE magazzino SET disponibilita_pezzi= magazzino.disponibilita_pezzi-? WHERE id_farmaco_magazzino=? AND id_farmacia=?";
-                                statement = connection.prepareStatement(query);
-                                statement.setInt(1, quantita[i]);
-                                statement.setInt(2, idprodotti[i]);
-                                statement.setInt(3, u.getIdFarmacia());
-                                result = statement.executeUpdate();
-                                if (result <= 0) {
-                                    fail = true;
-                                    break;
-                                }
-                                query = "INSERT INTO storico VALUES (?,?,?)";
-                                statement = connection.prepareStatement(query);
-                                statement.setInt(1, quantita[i]);
-                                statement.setInt(2, idprodotti[i]);
-                                statement.setInt(3, id);
-                                if (statement.executeUpdate() <= 0) {
-                                    fail = true;
-                                    break;
-                                }
+                    for (int i = 0; i < idprodotti.length; i++) {
+                        //SOTTRAGGO DAL MAGAZZINO
+                        System.out.println("entrato nel for");
 
-                            }// fine for
+                        query = "UPDATE magazzino SET disponibilita_pezzi= magazzino.disponibilita_pezzi-? WHERE id_farmaco_magazzino=? AND id_farmacia=?";
+                        statement = connection.prepareStatement(query);
+                        statement.setInt(1, quantita[i]);
+                        statement.setInt(2, idprodotti[i]);
+                        statement.setInt(3, u.getIdFarmacia());
+                        result = statement.executeUpdate();
+                        if (result <= 0) {
+                            System.out.println("fallito dopo query magazzino");
+                            fail = true;
+                            break;
+                        }
+                        //INSERICO NELLOSTORICO
+                        query = "INSERT INTO storico VALUES (?,?,?)";
+                        statement = connection.prepareStatement(query);
+                        statement.setInt(1, quantita[i]);
+                        statement.setInt(2, idprodotti[i]);
+                        statement.setInt(3, id);
+                        if (statement.executeUpdate() <= 0) {
+                            fail = true;
+                            break;
+                        }
+
+                    }// fine for
 
                 }//fine else
             }//fine if

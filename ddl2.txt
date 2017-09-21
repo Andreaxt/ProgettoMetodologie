@@ -101,21 +101,14 @@ create table ricetta
 
 create table vendita
 (
-	quantita integer,
-	id_farmaco integer
-		constraint vendita_farmaco_id_farmaco_fk
-			references farmaco,
 	paz_cf varchar(11)
 		constraint vendita_paziente_codice_fiscale_fk
 			references paziente,
 	id_venditore integer
 		constraint vendita_utenti_id_utente_fk
 			references utenti,
-	id_farmacia integer
-		constraint vendita_farmacia_id_farmacia_fk
-			references farmacia,
 	date date,
-	id_vendita integer not null
+	id_vendita serial not null
 		constraint vendita_id_vendita_pk
 			primary key
 )

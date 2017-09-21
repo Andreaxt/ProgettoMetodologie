@@ -43,8 +43,17 @@ public class BuyMedicinalOb {
             int x = 0;
             while (rs.next()) {
                 out = out.concat("<tr><td><p>" + rs.getInt(1) + "</p></td><td><p>" + rs.getString(2) + "</p></td>");
-                if (!permessi.equals("ob"))
-                    out = out.concat("<td><p>" + rs.getBigDecimal(3) + "</p></td>");
+                if (!permessi.equals("ob")) {
+                    String s="";
+                    if(rs.getString(3).equals("df")){
+                        s="si";
+                    }
+                    else{
+                        s="no";
+                    }
+                    out = out.concat("<td><p>" +s+ "</p></td>");
+
+                }
                 out = out.concat("<td><p>" + rs.getBigDecimal(4) + " &#8364</p></td><td>" + rs.getInt(5) + "</p></td><td><p><input type=\"text\" name=\"ordina" + x + "\" size=\"3\" id=\"ordina" + x + "\" value=\"0\" class=\"ordina\"><input class=\"add\"type=\"button\" id=\"add" + x + "\" value=\"+\"><input class=\"sub\"type=\"button\" id=\"sub" + x++ + "\" value=\"-\">");
             }
 

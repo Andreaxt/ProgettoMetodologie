@@ -2,24 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb76e968-04b6-41b5-a37d-d9af341ec792" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/erroreVendita.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/venditaConclusa.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/erroreVendita.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/venditaConclusa.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/classes/action/SellActionOb.class" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/classes/action/SellActionOb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoMetodologie/action/SellActionOb.class" afterPath="$PROJECT_DIR$/out/production/ProgettoMetodologie/action/SellActionOb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ddl2.txt" afterPath="$PROJECT_DIR$/ddl2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/erroreVendita.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/erroreVendita.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/homeMedicoFarmacista.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/homeMedicoFarmacista.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/homeTitolareFarmacia.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/homeTitolareFarmacia.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/obVendita.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/obVendita.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/utilityJS/utilityBuyOb.js" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/utilityJS/utilityBuyOb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/venditaConclusa.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/venditaConclusa.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java" afterPath="$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/SellActionOb.java" afterPath="$PROJECT_DIR$/src/action/SellActionOb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/erroreVendita.jsp" afterPath="$PROJECT_DIR$/web/erroreVendita.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/homeMedicoFarmacista.jsp" afterPath="$PROJECT_DIR$/web/homeMedicoFarmacista.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/homeTitolareFarmacia.jsp" afterPath="$PROJECT_DIR$/web/homeTitolareFarmacia.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/obVendita.jsp" afterPath="$PROJECT_DIR$/web/obVendita.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/utilityJS/utilityBuyOb.js" afterPath="$PROJECT_DIR$/web/utilityJS/utilityBuyOb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/venditaConclusa.jsp" afterPath="$PROJECT_DIR$/web/venditaConclusa.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -332,17 +330,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Db_Farmacia.public.vendita" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.vendita">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="SellActionOb.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/action/SellActionOb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="812">
+              <caret line="101" column="50" lean-forward="false" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1505383115169" expanded="true" signature="1812:1879" ph="SELECT id_fa... Farmaco" />
+                <marker date="1505383115169" expanded="true" signature="2747:2815" ph="INSERT INTO vendita... " />
+                <marker date="1505383115169" expanded="true" signature="3434:3502" ph="SELECT max(i... vendita" />
+                <marker date="1505383115169" expanded="true" signature="3440:3501" ph="select max(i... vendita" />
+                <marker date="1505383115169" expanded="true" signature="3440:3502" ph="select max(i... vendita" />
+                <marker date="1505383115169" expanded="true" signature="3971:4091" ph="UPDATE magaz... " />
+                <marker date="1505383115169" expanded="true" signature="4666:4700" ph="INSERT INTO storico... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -357,21 +359,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obVendita.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/obVendita.jsp">
+      <file leaf-file-name="SellActionDf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/action/SellActionDf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="-145">
+              <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1505383115140" expanded="true" signature="2618:2685" ph="SELECT id_fa... Farmaco" />
+                <marker date="1505383115140" expanded="true" signature="3584:3652" ph="INSERT INTO vendita... " />
+                <marker date="1505383115140" expanded="true" signature="4271:4339" ph="SELECT max(i... vendita" />
+                <marker date="1505383115140" expanded="true" signature="4906:5026" ph="UPDATE magaz... " />
+                <marker date="1505383115140" expanded="true" signature="5649:5683" ph="INSERT INTO storico... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListaProdotti.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/beans/ListaProdotti.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Farmaco.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/beans/Farmaco.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-178">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venditaConclusa.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="257" lean-forward="false" selection-start-line="0" selection-start-column="257" selection-end-line="0" selection-end-column="257" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venditaConclusa.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/venditaConclusa.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="1037">
+              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -379,22 +421,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="erroreVendita.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/erroreVendita.jsp">
+      <file leaf-file-name="obVendita.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/obVendita.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="115" selection-end-column="7" />
+            <state relative-caret-position="-595">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeMedicoFarmacista.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/homeMedicoFarmacista.jsp">
+      <file leaf-file-name="BuyMedicinalOb.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="99" column="34" lean-forward="false" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+              <folding>
+                <marker date="1505384189278" expanded="true" signature="880:1134" ph="SELECT Prodo... Prodotto" />
+                <marker date="1505384189278" expanded="true" signature="1173:1457" ph="SELECT Prodo... Prodotto" />
+                <marker date="1505384189278" expanded="true" signature="2836:2893" ph="SELECT nome,... Prodotto" />
+                <marker date="1505384189278" expanded="true" signature="3653:3697" ph="SELECT costo... farmaco" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -409,8 +456,8 @@
         <option value="CSS File" />
         <option value="JavaFXApplication" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -437,7 +484,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/newMsgPage.js" />
         <option value="$PROJECT_DIR$/web/newMsgPage.js" />
         <option value="$PROJECT_DIR$/web/LoginPage.jsp" />
         <option value="$PROJECT_DIR$/src/UtilityJs/utilMessaggi.js" />
@@ -477,17 +523,18 @@
         <option value="$PROJECT_DIR$/src/beans/Farmaco.java" />
         <option value="$PROJECT_DIR$/src/beans/ListaProdotti.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
-        <option value="$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java" />
         <option value="$PROJECT_DIR$/web/utilityJS/utilityBuyOb.js" />
         <option value="$PROJECT_DIR$/src/action/NewInsertUserAction.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql" />
-        <option value="$PROJECT_DIR$/src/action/SellActionOb.java" />
         <option value="$PROJECT_DIR$/web/homeTitolareFarmacia.jsp" />
         <option value="$PROJECT_DIR$/web/homeMedicoFarmacista.jsp" />
         <option value="$PROJECT_DIR$/web/LogOutPage.jsp" />
         <option value="$PROJECT_DIR$/web/erroreVendita.jsp" />
         <option value="$PROJECT_DIR$/web/obVendita.jsp" />
         <option value="$PROJECT_DIR$/web/venditaConclusa.jsp" />
+        <option value="$PROJECT_DIR$/src/action/SellActionOb.java" />
+        <option value="$PROJECT_DIR$/src/action/SellActionDf.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql" />
+        <option value="$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java" />
       </list>
     </option>
   </component>
@@ -1256,15 +1303,15 @@
       <workItem from="1505289933670" duration="901000" />
       <workItem from="1505290996128" duration="5804000" />
       <workItem from="1505301056087" duration="10378000" />
-      <workItem from="1505376961032" duration="3659000" />
+      <workItem from="1505376961032" duration="6418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272478000" />
+    <option name="totallyTimeSpent" value="275237000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1290,6 +1337,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34697217" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34042552" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.7368421" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.2631579" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1299,7 +1347,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34042552" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1320,11 +1367,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/Image/MailImage2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Image/pillole.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1429,18 +1471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.farmacia">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utility/RestoreWareHouseUtility.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1475,20 +1505,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/utilityJS/utilityBuyOb.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/beans/ListaProdotti.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#254#255#0" expanded="false" />
-            <element signature="e#306#307#0" expanded="false" />
-            <element signature="e#357#358#0" expanded="false" />
-            <element signature="e#396#397#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/function/ToIntFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1500,27 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="76" column="184" lean-forward="false" selection-start-line="76" selection-start-column="184" selection-end-line="76" selection-end-column="184" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/beans/Farmaco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#410#411#0" expanded="false" />
-            <element signature="e#440#441#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#588#589#0" expanded="false" />
-            <element signature="e#633#634#0" expanded="false" />
-            <element signature="e#673#674#0" expanded="false" />
-            <element signature="e#705#706#0" expanded="false" />
-            <element signature="e#736#737#0" expanded="false" />
-            <element signature="e#781#782#0" expanded="false" />
-            <element signature="e#821#822#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1662,14 +1657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/homeMedicoFarmacista.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1699,36 +1686,6 @@
         <state relative-caret-position="178">
           <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/SellActionOb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1505311000640" expanded="true" signature="1955:2022" ph="SELECT id_fa... Farmaco" />
-            <marker date="1505311000640" expanded="true" signature="2923:2991" ph="INSERT INTO vendita... " />
-            <marker date="1505311000640" expanded="true" signature="3610:3678" ph="SELECT max(i... vendita" />
-            <marker date="1505311000640" expanded="true" signature="3616:3677" ph="select max(i... vendita" />
-            <marker date="1505311000640" expanded="true" signature="3616:3678" ph="select max(i... vendita" />
-            <marker date="1505311000640" expanded="true" signature="4277:4397" ph="UPDATE magaz... " />
-            <marker date="1505311000640" expanded="true" signature="5116:5150" ph="INSERT INTO storico... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <marker date="1505291998347" expanded="true" signature="880:1134" ph="SELECT Prodo... Prodotto" />
-            <marker date="1505291998347" expanded="true" signature="1173:1457" ph="SELECT Prodo... Prodotto" />
-            <marker date="1505291998347" expanded="true" signature="2614:2671" ph="SELECT nome,... Prodotto" />
-            <marker date="1505291998347" expanded="true" signature="3431:3475" ph="SELECT costo... farmaco" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1783,6 +1740,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/erroreVendita.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/beans/ListaProdotti.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/SellActionOb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="101" column="50" lean-forward="false" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1505383115169" expanded="true" signature="1812:1879" ph="SELECT id_fa... Farmaco" />
+            <marker date="1505383115169" expanded="true" signature="2747:2815" ph="INSERT INTO vendita... " />
+            <marker date="1505383115169" expanded="true" signature="3434:3502" ph="SELECT max(i... vendita" />
+            <marker date="1505383115169" expanded="true" signature="3440:3501" ph="select max(i... vendita" />
+            <marker date="1505383115169" expanded="true" signature="3440:3502" ph="select max(i... vendita" />
+            <marker date="1505383115169" expanded="true" signature="3971:4091" ph="UPDATE magaz... " />
+            <marker date="1505383115169" expanded="true" signature="4666:4700" ph="INSERT INTO storico... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/homeTitolareFarmacia.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1791,28 +1784,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/obVendita.jsp">
+    <entry file="file://$PROJECT_DIR$/src/action/SellActionDf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="72" selection-end-column="0" />
+        <state relative-caret-position="-145">
+          <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1505383115140" expanded="true" signature="2618:2685" ph="SELECT id_fa... Farmaco" />
+            <marker date="1505383115140" expanded="true" signature="3584:3652" ph="INSERT INTO vendita... " />
+            <marker date="1505383115140" expanded="true" signature="4271:4339" ph="SELECT max(i... vendita" />
+            <marker date="1505383115140" expanded="true" signature="4906:5026" ph="UPDATE magaz... " />
+            <marker date="1505383115140" expanded="true" signature="5649:5683" ph="INSERT INTO storico... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.farmacia">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/erroreVendita.jsp">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="115" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="257" lean-forward="false" selection-start-line="0" selection-start-column="257" selection-end-line="0" selection-end-column="257" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/beans/Farmaco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/venditaConclusa.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="1037">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#p#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/obVendita.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/BuyMedicinalOb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding>
+            <marker date="1505384189278" expanded="true" signature="880:1134" ph="SELECT Prodo... Prodotto" />
+            <marker date="1505384189278" expanded="true" signature="1173:1457" ph="SELECT Prodo... Prodotto" />
+            <marker date="1505384189278" expanded="true" signature="2836:2893" ph="SELECT nome,... Prodotto" />
+            <marker date="1505384189278" expanded="true" signature="3653:3697" ph="SELECT costo... farmaco" />
           </folding>
         </state>
       </provider>
