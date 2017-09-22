@@ -24,7 +24,7 @@ public class RicettaAction extends Action {
         //lista codici ricette
         ArrayList<String> codRicette = new ArrayList<>();
         for (int i = 0; i < listaRicette.size(); i++)
-            codRicette.add(request.getParameter("cr" + i));
+            codRicette.add(request.getParameter("codR" + i));
         boolean diffpatient = false;
         boolean pazNonInserito = false;
         boolean fail = false;

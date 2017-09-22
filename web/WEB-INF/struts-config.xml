@@ -36,5 +36,25 @@
         <action path="/startsell" type="action.SellActionOb"/>
 
 
+
+        <action path="/ricetta" type="action.RicettaAction">
+            <forward name="sell" path="/endsell.do"/>
+            <forward name="insert-patient" path="newPaz.jsp"/>
+            <forward name="error" path="/WEB-INF/result/errorPage.jsp"/>
+        </action>
+
+        <action path="/endsell" type="action.EndPurchaseAction">
+            <forward name="sell-made" path="/venditaConclusa.jsp"/>
+            <forward name="error" path="/WEB-INF/result/errorPage.jsp"/>
+        </action>
+
+        <action path="/newPaz" type="action.NewPazAction">
+        <forward name="sell" path="/endsell.do"/>
+        <forward name="error" path="/WEB-INF/result/errorPage.jsp"/>
+        </action>
+
+
+
+
     </action-mappings>
 </struts-config>

@@ -78,9 +78,8 @@
 
 <h1>Inserisci i dati della ricetta</h1>
 <div class="login__pagediv">
-    <form action="newUtente.do" method="post"  class="div__login" >
-        Codice Ricetta:<input type="text" name="user" class="casella__user"><br>
-        Codice Fiscale<input type="text" class="casella__user" name="psw"/><br>
+    <form action="/ricetta.do" method="post"  class="div__login" >
+        Codice Ricetta:<input type="text" name="codR" class="casella__user"><br>
         <input type="submit" id="invio" value="Verifica" class="botton__submit">
     </form>
 </div>

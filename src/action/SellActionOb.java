@@ -75,7 +75,7 @@ public class SellActionOb extends Action {
                 result = statement.executeUpdate();
 
                 if (result <= 0) {
-                    System.out.println("fallito nel if minore di 0");
+
                     fail = true;
                 }
 

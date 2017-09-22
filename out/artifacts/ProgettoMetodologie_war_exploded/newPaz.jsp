@@ -78,7 +78,7 @@
 
 <h1>Inserisci i dati del nuovo paziente</h1>
 <div class="login__pagediv">
-    <form action="newPaz.do" method="post"  class="div__login" >
+    <form action="newUtente.do" method="post"  class="div__login" >
         CF Paziente:<input type="text" name="cf" class="casella__user"><br>
         Nome<input type="text" class="casella__user" name="nome"/><br>
         Cognome<input type="text" class="casella__user" name="cognome"/><br>
