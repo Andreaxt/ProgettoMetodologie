@@ -39,6 +39,7 @@ public class EndPurchaseAction extends Action {
         int id=-1;
         int i = 0;
         try {
+            System.out.println("entrato nella fine vendita");
             connection= StaticConn.getConn();
             query = "INSERT INTO vendita ( date, id_venditore, paz_cf) VALUES (?,?,?)";
             statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -69,7 +70,7 @@ public class EndPurchaseAction extends Action {
 
                 if (id != -1) {
                     for (Farmaco prod : listaRicette) {
-                        if (prod.isRicetta()) {
+                       /* if (prod.isRicetta()) {
                             query = "INSERT INTO ObbligoRicetta VALUES (?,?)";
                             statement = connection.prepareStatement(query);
                             statement.setInt(1, id);
@@ -78,7 +79,7 @@ public class EndPurchaseAction extends Action {
                                 fail = true;
                                 break;
                             }
-                        }
+                       }*/
                         query = "UPDATE magazzino SET disponibilita_pezzi= magazzino.disponibilita_pezzi-? WHERE id_farmaco_magazzino=? AND id_farmacia=?";
                         statement = connection.prepareStatement(query);
                         statement.setInt(1, prod.getQuantita());

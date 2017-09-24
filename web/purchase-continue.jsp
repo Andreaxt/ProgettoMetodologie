@@ -1,13 +1,8 @@
 <%@ page import="Utility.BuyMedicinalUtility" %>
-<%@ page import="Utility.BuyMedicinalOb" %><%--
-  Created by IntelliJ IDEA.
-  User: Andrea
-  Date: 05/06/2017
-  Time: 11:39
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="Utility.BuyMedicinalOb" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<script src="utilityJS/utilityBuyOb.js"></script>
+
 <html>
 
 <style>
@@ -16,12 +11,16 @@
     }
 
 </style>
+
 <head>
 
     <title>$LoginPage$</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link href="style.css" rel="stylesheet" >
+
+    <script src="library/jquery-3.2.1.min.js" ></script>
+    <script src="utilityJS/utilityBuyOb.js"></script>
 
 </head>
 
@@ -89,7 +88,7 @@
             </thead>
             <tbody>
             <% BuyMedicinalOb vendita = new BuyMedicinalOb();%>
-            <%=vendita.listaAcquisto(acquisto)%>
+            <%=vendita.listaRicetta(acquisto)%>
             </tbody>
         </table>
         <input class="ricetta" type="submit" id="ricetta" value="Invia Codici" style="float:right;">

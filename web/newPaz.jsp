@@ -19,8 +19,11 @@
 
     <title>$LoginPage$</title>
 
+    <script src="utilityJS/utilityBuyOb.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link href="style.css" rel="stylesheet" >
+    <script src="library/jquery-3.2.1.min.js" ></script>
 
 </head>
 

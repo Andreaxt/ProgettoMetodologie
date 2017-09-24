@@ -63,6 +63,29 @@ public class BuyMedicinalOb {
         return out;
     }
 
+
+
+    public String listaRicetta(ListaProdotti acquisto) {
+        String query;
+        String out = "";
+        try {
+            for (Farmaco prodottoAcquistato : acquisto) {
+                query = "SELECT nome_farmaco FROM farmaco WHERE id_farmaco=? AND abilitazione='df'";
+                st = conn.prepareStatement(query);
+                st.setInt(1, prodottoAcquistato.getProdotto());
+                rs = st.executeQuery();
+                int x = 0;
+                if (rs.next()) {
+                    out = out.concat("<tr><td><p>" + prodottoAcquistato.getProdotto() + "</p></td><td><p>" + rs.getString(1) + "</p></td><td><input type=\"text\" name=\"cr" + x + "\" id=\"cr" + x++ + "\" class=\"cr\" ></td></tr>");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return out;
+    }
+
+
     public String listaAcquisto(ListaProdotti acquisto) {
         String query;
         String out = "";

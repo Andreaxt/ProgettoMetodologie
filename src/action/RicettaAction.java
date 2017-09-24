@@ -22,9 +22,12 @@ public class RicettaAction extends Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
         ListaProdotti listaRicette = ((ListaProdotti) request.getSession().getAttribute("acquisto")).ricettaElement();
         //lista codici ricette
+        System.out.println("entrato in ricettaAction");
         ArrayList<String> codRicette = new ArrayList<>();
         for (int i = 0; i < listaRicette.size(); i++)
-            codRicette.add(request.getParameter("codR" + i));
+            codRicette.add(request.getParameter("cr" + i));
+
+
         boolean diffpatient = false;
         boolean pazNonInserito = false;
         boolean fail = false;
@@ -37,11 +40,19 @@ public class RicettaAction extends Action {
         String query;
         //Controllo che tutti gli id sia di unico paziente
         try {
+            System.out.println("entrato nel try");
             conn= StaticConn.getConn();
+            System.out.println("dopo la connessione");
+
+
+
+
             for (int i = 0; i < listaRicette.size(); i++) {
                 query = "SELECT cf_paz FROM ricetta WHERE id_ricetta=?";
                 statement = conn.prepareStatement(query);
-                statement.setInt(1, Integer.decode(codRicette.get(i)));
+                int id_ricetta=Integer.decode(codRicette.get(i));
+                System.out.println(id_ricetta);
+                statement.setInt(1, id_ricetta);
                 rs = statement.executeQuery();
                 if (!rs.isBeforeFirst()) {
                     request.setAttribute("errore", "ricetta non esistente");
@@ -49,22 +60,29 @@ public class RicettaAction extends Action {
                 }
                 else
                     while (rs.next()) {
-                        if (cod_fiscale_paz== null)
+                        if (cod_fiscale_paz== null) {
                             cod_fiscale_paz = rs.getString(1);
-                        else if (cod_fiscale_paz.equals(rs.getString(1)))
+                            System.out.println("codice paz"+cod_fiscale_paz);
+                        }
+                        else if (cod_fiscale_paz.equals(rs.getString(1))) {
+                            System.out.println("else if");
                             diffpatient = true;
+                        }
                     }
             }
             if (diffpatient)
-                request.setAttribute("errore", "Puoi usare un solo paziente alla volta");
+                request.setAttribute("error", "Puoi usare un solo paziente alla volta");
             else if(!fail){
-                query = "SELECT count(*) FROM Paziente WHERE CF=?";
+                System.out.println("codice fiscale"+ cod_fiscale_paz);
+                query = "SELECT count(*) FROM paziente WHERE codice_fiscale=?";
                 statement = conn.prepareStatement(query);
                 statement.setString(1, cod_fiscale_paz);
                 rs = statement.executeQuery();
                 rs.next();
-                if (rs.getInt(1) == 0)
+                if (rs.getInt(1) == 0) {
+                    System.out.println("paz non inserito");
                     pazNonInserito = true;
+                }
             }
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

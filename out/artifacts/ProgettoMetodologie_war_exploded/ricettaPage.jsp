@@ -6,9 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<script src="utilityJS/utilityBuyOb.js"></script>
+<%@ page import="action.RicettaAction" %>
 <html>
+
 
 <style>
     input[type=submit]:hover {
@@ -19,6 +19,10 @@
 <head>
 
     <title>$LoginPage$</title>
+
+
+    <script src="utilityJS/utilityBuyOb.js"></script>
+    <script src="library/jquery-3.2.1.min.js" ></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link href="style.css" rel="stylesheet" >
@@ -81,7 +85,7 @@
 <div class="login__pagediv">
     <form action="/ricetta.do" method="post"  class="div__login" >
         Codice Ricetta:<input type="text" name="codR" class="casella__user"><br>
-        <input type="submit" id="invio" value="Verifica" class="botton__submit">
+        <input type="button" id="ricetta" value="Verifica" class="ricetta">
     </form>
 </div>
 

@@ -1,14 +1,6 @@
-/**
- * Created by Andrea on 12/09/2017 ciao ciao.
- */
-
-
-$(function () {
-    $("#menu").stick_in_parent()
-});
 
 $(document).ready(function () {
-    //AGGIUTA ELEMENTO
+
     $(".add").click(function () {
         var elemento = $(this).attr('id').replace(/[^0-9]/g, '');
         var txt = $("input[name=ordina" + elemento + "]");
@@ -19,16 +11,12 @@ $(document).ready(function () {
             txt.val(parseInt(txt.val()) + 1);
 
     });
-
-    //DIMINUIZIONE ELEMENTO
     $(".sub").click(function () {
         var elemento = $(this).attr('id').replace(/[^0-9]/g, '');
         var txt = $("input[name=ordina" + elemento + "]");
         if (parseInt(txt.val()) != 0)
             txt.val(parseInt(txt.val()) - 1);
     });
-
-    //Ordine da fare
     $(".ordinare").click(function () {
         var elemento = $(this).attr('id').replace(/[^0-9]/g, '');
         var txt = $("input[name=ordina" + elemento + "]");
