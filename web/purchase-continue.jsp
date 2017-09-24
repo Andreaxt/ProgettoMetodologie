@@ -1,12 +1,13 @@
-<%--
+<%@ page import="Utility.BuyMedicinalUtility" %>
+<%@ page import="Utility.BuyMedicinalOb" %><%--
   Created by IntelliJ IDEA.
   User: Andrea
-  Date: 21/09/2017
-  Time: 15:27
+  Date: 05/06/2017
+  Time: 11:39
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<script src="utilityJS/utilityBuyOb.js"></script>
 <html>
 
 <style>
@@ -26,6 +27,7 @@
 
 <body>
 <jsp:useBean id="userCon" scope="session" class="beans.UtenteConnesso" />
+<jsp:useBean id="acquisto" scope="session" class="beans.ListaProdotti" />
 
 <header class="header clearfix">
     <a href="" class="header__Logo">Farmacie Della Regione Piemonte</a>
@@ -75,14 +77,22 @@
 </header>
 
 <% if(permessi.equals("tf")||permessi.equals("df")){ %>
-
-<h1>Inserisci i dati del nuovo paziente</h1>
-<div class="login__pagediv">
-    <form action="newPaz.do" method="post"  class="div__login" >
-        CF Paziente:<input type="text" name="cf" class="casella__user"><br>
-        Nome<input type="text" class="casella__user" name="nome"/><br>
-        Cognome<input type="text" class="casella__user" name="cognome"/><br>
-        <input type="submit" id="invio" value="Verifica" class="botton__submit">
+<div style="overflow-x:auto;" id="log">
+    <form method="post" action="/ricetta.do">
+        <table id="lm">
+            <thead>
+            <tr>
+                <th>Codice Prodottto</th>
+                <th>Nome prodotto</th>
+                <th>COD. Ricetta</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% BuyMedicinalOb vendita = new BuyMedicinalOb();%>
+            <%=vendita.listaAcquisto(acquisto)%>
+            </tbody>
+        </table>
+        <input class="ricetta" type="submit" id="ricetta" value="Invia Codici" style="float:right;">
     </form>
 </div>
 
@@ -107,4 +117,3 @@ else{ %>
 
 </body>
 </html>
-

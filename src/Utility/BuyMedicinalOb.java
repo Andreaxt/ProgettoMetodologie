@@ -46,10 +46,10 @@ public class BuyMedicinalOb {
                 if (!permessi.equals("ob")) {
                     String s="";
                     if(rs.getString(3).equals("df")){
-                        s="si";
+                        s="1";
                     }
                     else{
-                        s="no";
+                        s="0";
                     }
                     out = out.concat("<td><p>" +s+ "</p></td>");
 

@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<script src="utilityJS/utilityBuyOb.js"></script>
 <html>
 
 <style>

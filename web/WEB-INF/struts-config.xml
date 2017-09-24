@@ -33,9 +33,6 @@
             <forward name="success" path="/msgTargetReg.jsp"/>
         </action>
 
-        <action path="/startsell" type="action.SellActionOb"/>
-
-
 
         <action path="/ricetta" type="action.RicettaAction">
             <forward name="sell" path="/endsell.do"/>
@@ -52,6 +49,9 @@
         <forward name="sell" path="/endsell.do"/>
         <forward name="error" path="/WEB-INF/result/errorPage.jsp"/>
         </action>
+
+        <action path="/startsell" type="action.SellActionOb"/>
+
 
 
 

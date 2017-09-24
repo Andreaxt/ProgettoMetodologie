@@ -136,9 +136,11 @@ public class SellActionOb extends Action {
             } else {
                 request.getSession().setAttribute("acquisto", prodottiAcquistati);
                 if (!richiedeRicetta) {
+                    System.out.println(" vendita conclusa");
                     response.getOutputStream().print("sell-made");
                 } else {
-                    response.getOutputStream().print("sell-continue");
+                    System.out.println("continua la vendita");
+                    response.getOutputStream().print("purchase");
                 }
             }
         }catch (IOException e){
