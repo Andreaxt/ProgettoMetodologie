@@ -38,8 +38,6 @@
     <li class="header__menu__item"><a href="LoginPage.jsp">Login</a></li>
     <li class="header__menu__item"><a href="">Chi siamo</a></li>
     <li class="header__menu__item"><a href="">FAQ</a></li>
-    <li class="header__menu__item"><a href="">item</a></li>
-
   </ul>
 </header>
 <div class="login__pagediv">
