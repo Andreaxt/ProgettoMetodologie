@@ -36,7 +36,7 @@
 
         <action path="/ricetta" type="action.RicettaAction">
             <forward name="sell" path="/endsell.do"/>
-            <forward name="insert-patient" path="newPaz.jsp"/>
+            <forward name="insert-patient" path="/newPaz.jsp"/>
             <forward name="error" path="/WEB-INF/result/errorPage.jsp"/>
         </action>
 

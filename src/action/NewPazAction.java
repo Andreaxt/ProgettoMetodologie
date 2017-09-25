@@ -20,13 +20,14 @@ public class NewPazAction extends Action {
         boolean fail = false;
         Connection connection = null;
         PreparedStatement statement = null;
-        String query = "INSERT INTO paziente VALUES (?,?,?)";
+        System.out.println("entrato nel ins paz");
+        String query = "INSERT INTO paziente(nome, cognome, codice_fiscale) VALUES (?,?,?)";
         try {
             connection= StaticConn.getConn();
             statement = connection.prepareStatement(query);
             statement.setString(1, nome_paz);
-            statement.setString(1, cognome_paz);
-            statement.setString(2, cf);
+            statement.setString(2, cognome_paz);
+            statement.setString(3, cf);
             if (statement.executeUpdate() <= 0) {
                 request.setAttribute("errore", "Impossibile aggiungere il paziente");
                 fail = true;

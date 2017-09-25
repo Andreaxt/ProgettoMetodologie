@@ -85,7 +85,7 @@
         CF Paziente:<input type="text" name="cf" class="casella__user"><br>
         Nome<input type="text" class="casella__user" name="nome"/><br>
         Cognome<input type="text" class="casella__user" name="cognome"/><br>
-        <input type="submit" id="invio" value="Verifica" class="botton__submit">
+        <input type="submit" id="paziente" value="Aggiungi" class="paziente">
     </form>
 </div>
 
