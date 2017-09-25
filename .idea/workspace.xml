@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb76e968-04b6-41b5-a37d-d9af341ec792" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/ricettaPage.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/classes/action/NewPazAction.class" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/classes/action/NewPazAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProgettoMetodologie/action/NewPazAction.class" afterPath="$PROJECT_DIR$/out/production/ProgettoMetodologie/action/NewPazAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a1452e77-0a95-415f-8dc9-292a965b7bb0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/struts-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/newPaz.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/newPaz.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/action/NewPazAction.java" afterPath="$PROJECT_DIR$/src/action/NewPazAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/LoginPage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/LoginPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/result/errorPage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ProgettoMetodologie_war_exploded/WEB-INF/result/errorPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/LoginPage.jsp" afterPath="$PROJECT_DIR$/web/LoginPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/result/errorPage.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/result/errorPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/newPaz.jsp" afterPath="$PROJECT_DIR$/web/newPaz.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -327,41 +322,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utilityBuyOb.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/utilityJS/utilityBuyOb.js">
+      <file leaf-file-name="pageStatistiche.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/pageStatistiche.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EndPurchaseAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/action/EndPurchaseAction.java">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1506271565992" expanded="true" signature="1664:1728" ph="INSERT INTO vendita... " />
-                <marker date="1506271565992" expanded="true" signature="2268:2336" ph="SELECT max(i... vendita" />
-                <marker date="1506271565992" expanded="true" signature="2881:2920" ph="INSERT INTO ObbligoRicetta... " />
-                <marker date="1506271565992" expanded="true" signature="3375:3495" ph="UPDATE magaz... " />
-                <marker date="1506271565992" expanded="true" signature="3961:3995" ph="INSERT INTO storico... " />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="120" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RicettaAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/action/RicettaAction.java">
+      <file leaf-file-name="StatisticsUtility.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utility/StatisticsUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+            <state relative-caret-position="121">
+              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
-                <marker date="1506271565961" expanded="true" signature="1638:1683" ph="SELECT cf_pa... ricetta" />
-                <marker date="1506271565961" expanded="true" signature="2892:2944" ph="SELECT count... paziente" />
+                <marker date="1506333339274" expanded="true" signature="691:722" ph="select count... vendita" />
+                <marker date="1506333339274" expanded="true" signature="1058:1091" ph="select sum(q... storico" />
+                <marker date="1506333339274" expanded="true" signature="1478:1598" ph="select sum(q... storico" />
               </folding>
             </state>
           </provider>
@@ -385,8 +374,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Db_Farmacia.public.vendita" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.vendita">
+      <file leaf-file-name="Db_Farmacia.public.farmaco" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.farmaco">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -396,51 +385,6 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="errorPage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/result/errorPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="66" lean-forward="false" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Db_Farmacia.public.utenti" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.utenti">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginPage.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/LoginPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-158">
-              <caret line="39" column="58" lean-forward="false" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirm.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/result/confirm.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="37" column="54" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -454,9 +398,9 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaFXApplication" />
-        <option value="Class" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -483,8 +427,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/newFarmaciaPage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/result/confirm.jsp" />
         <option value="$PROJECT_DIR$/web/style.css" />
         <option value="$PROJECT_DIR$/web/newUtentiFarmacia.jsp" />
@@ -531,9 +473,11 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
         <option value="$PROJECT_DIR$/web/newPaz.jsp" />
         <option value="$PROJECT_DIR$/src/action/NewPazAction.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql" />
         <option value="$PROJECT_DIR$/web/WEB-INF/result/errorPage.jsp" />
         <option value="$PROJECT_DIR$/web/LoginPage.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql" />
+        <option value="$PROJECT_DIR$/src/Utility/StatisticsUtility.java" />
+        <option value="$PROJECT_DIR$/web/pageStatistiche.jsp" />
       </list>
     </option>
   </component>
@@ -641,82 +585,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoEsame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoMetodologie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoEsame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoMetodologie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="result" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoEsame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoMetodologie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilityJS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoEsame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProgettoMetodologie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1390,12 +1258,12 @@
       <workItem from="1506092505230" duration="101000" />
       <workItem from="1506259128947" duration="5491000" />
       <workItem from="1506264771011" duration="8875000" />
-      <workItem from="1506327169704" duration="1206000" />
+      <workItem from="1506327169704" duration="5646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312184000" />
+    <option name="totallyTimeSpent" value="316624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -1421,11 +1289,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34042552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34042552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214826" sideWeight="0.6228288" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214826" sideWeight="0.37717122" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35679215" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214826" sideWeight="0.6234097" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214826" sideWeight="0.37659034" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24281392" sideWeight="0.18627451" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1433,7 +1302,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35679215" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1445,32 +1313,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/action/EndPurchaseAction.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/action/EndPurchaseAction.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/action/EndPurchaseAction.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/action/EndPurchaseAction.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager />
@@ -1480,41 +1322,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/tomcat-coyote.jar!/org/apache/tomcat/util/net/NioEndpoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/tomcat-coyote.jar!/org/apache/coyote/AbstractProtocol.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="824" column="0" lean-forward="false" selection-start-line="824" selection-start-column="0" selection-end-line="824" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/tomcat-coyote.jar!/org/apache/coyote/AbstractProcessorLight.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/tomcat-coyote.jar!/org/apache/coyote/http11/Http11Processor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="483" column="0" lean-forward="false" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/catalina.jar!/org/apache/catalina/connector/CoyoteAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="400" column="0" lean-forward="false" selection-start-line="400" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/catalina.jar!/org/apache/catalina/core/StandardEngineValve.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1569,18 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.farmaco">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1686,14 +1481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utility/StaticConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="17" column="123" lean-forward="false" selection-start-line="17" selection-start-column="123" selection-end-line="17" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/struts-core.jar!/org/apache/struts/chain/commands/ActionCommandBase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -1716,14 +1503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/ricettaPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/newPaz.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1736,20 +1515,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
           <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/EndPurchaseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1506271565992" expanded="true" signature="1664:1728" ph="INSERT INTO vendita... " />
-            <marker date="1506271565992" expanded="true" signature="2268:2336" ph="SELECT max(i... vendita" />
-            <marker date="1506271565992" expanded="true" signature="2881:2920" ph="INSERT INTO ObbligoRicetta... " />
-            <marker date="1506271565992" expanded="true" signature="3375:3495" ph="UPDATE magaz... " />
-            <marker date="1506271565992" expanded="true" signature="3961:3995" ph="INSERT INTO storico... " />
+            <marker date="1506260235207" expanded="true" signature="880:1134" ph="SELECT farma... farmaco" />
+            <marker date="1506260235207" expanded="true" signature="1173:1457" ph="SELECT farma... farmaco" />
+            <marker date="1506260235207" expanded="true" signature="2835:2904" ph="SELECT nome Prodotto" />
+            <marker date="1506260235207" expanded="true" signature="2835:2908" ph="SELECT nome_... farmaco" />
+            <marker date="1506260235207" expanded="true" signature="3695:3752" ph="SELECT nome_... farmaco" />
+            <marker date="1506260235207" expanded="true" signature="4512:4556" ph="SELECT costo... farmaco" />
           </folding>
         </state>
       </provider>
@@ -1778,14 +1550,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/action/NewPazAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1812,14 +1576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/utilityJS/utilityBuyOb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.paziente">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1830,6 +1586,14 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ricettaPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1844,39 +1608,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.storico">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.vendita">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/result/confirm.jsp">
+    <entry file="file://$PROJECT_DIR$/src/action/EndPurchaseAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="37" column="54" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1506271565992" expanded="true" signature="1664:1728" ph="INSERT INTO vendita... " />
+            <marker date="1506271565992" expanded="true" signature="2268:2336" ph="SELECT max(i... vendita" />
+            <marker date="1506271565992" expanded="true" signature="2881:2920" ph="INSERT INTO ObbligoRicetta... " />
+            <marker date="1506271565992" expanded="true" signature="3375:3495" ph="UPDATE magaz... " />
+            <marker date="1506271565992" expanded="true" signature="3961:3995" ph="INSERT INTO storico... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/utilityJS/utilityBuyOb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1902,10 +1651,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/result/confirm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="37" column="54" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/StaticConn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/LoginPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="39" column="58" lean-forward="false" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+        <state relative-caret-position="493">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/BuyMedicinalUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <marker date="1502441076097" expanded="true" signature="777:968" ph="SELECT farma... magazzino" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/RestoreWareHouseUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1103">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <marker date="1502449751570" expanded="true" signature="813:1250" ph="SELECT farma... farmaco" />
+            <marker date="1502449751570" expanded="true" signature="916:1195" ph="SELECT tabel... *" />
+            <marker date="1502449751570" expanded="true" signature="1022:1117" ph="SELECT * fro... farmaco" />
+            <marker date="1502449751570" expanded="true" signature="2355:2474" ph="SELECT magaz... magazzino" />
+            <marker date="1502449751570" expanded="true" signature="2742:2851" ph="UPDATE magaz... " />
+            <marker date="1502449751570" expanded="true" signature="3188:3224" ph="INSERT INTO magazzino... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/EmailUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1505139577699" expanded="true" signature="775:853" ph="SELECT mitte... messaggi" />
+            <marker date="1505139577699" expanded="true" signature="1656:1740" ph="SELECT mitte... messaggi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.vendita">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.farmaco">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8dc4a234/a1452e77-0a95-415f-8dc9-292a965b7bb0/Db_Farmacia.public.storico">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a1452e77-0a95-415f-8dc9-292a965b7bb0/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/StatisticsUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <marker date="1506333339274" expanded="true" signature="691:722" ph="select count... vendita" />
+            <marker date="1506333339274" expanded="true" signature="1058:1091" ph="select sum(q... storico" />
+            <marker date="1506333339274" expanded="true" signature="1478:1598" ph="select sum(q... storico" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pageStatistiche.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding />
         </state>
       </provider>
